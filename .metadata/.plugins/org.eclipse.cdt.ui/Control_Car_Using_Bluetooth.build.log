@@ -1,0 +1,33 @@
+13:24:47 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3420 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:24:47 Build Finished. 0 errors, 0 warnings. (took 717ms)
+
