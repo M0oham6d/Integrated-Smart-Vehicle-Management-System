@@ -1,6 +1,6 @@
 /***************************************************************************************************************
  * pwm.h
- * Author: Muhammed Ayman
+ * Author: A7la Team
  * Module: PWM
  **************************************************************************************************************/
 
@@ -37,5 +37,8 @@ typedef struct
  * Function to initialize Timer0 with Fast PWM mode.
  */
 void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr);
+
+void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr);
+
 
 #endif /* MCAL_PWM_H_ */

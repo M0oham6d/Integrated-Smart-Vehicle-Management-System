@@ -2,31 +2,26 @@
  * Control_Car_Using_Bluetooth.c
  *
  *  Created on: Dec 15, 2024
- *      Author: Muhammed Ayman
+ *      Author: A7la Team
  */
 
 #include "../HAL/motor.h"
 #include "../MCAL/uart.h"
 #include "../Standard_Types/standard_types.h"
 #include <stdlib.h>
+#include <util/delay.h>
 
 uint8 motorSpeed(uint8 speed)
 {
 	switch(speed)
 	{
 	case '1':
-		return 20;
+		return 70;
 		break;
 	case '2':
-		return 40;
+		return 85;
 		break;
 	case '3':
-		return 60;
-		break;
-	case '4':
-		return 80;
-		break;
-	case '5':
 		return 100;
 		break;
 	}
@@ -36,36 +31,34 @@ int main(void)
 {
 	uint8 recievedMSG;
 
-	DcMotor_Init();
-
 	UART_ConfigType uart_configratoin = {9600, UART_Parity_NONE, UART_STOP_1_BIT, MODE_EIGHT_BIT};
 	UART_init(&uart_configratoin);
 
-	recievedMSG = UART_receiveByte();
+	DcMotor_Init(motorSpeed(UART_receiveByte()));
 
 	while(1)
 	{
+		recievedMSG = UART_receiveByte();
+
 		switch(recievedMSG)
 		{
 		case 'F':
-			recievedMSG = UART_receiveByte();
-			while(recievedMSG >= '1' && recievedMSG <= '5')
-			{
-				DcMotor_Rotate(CW, motorSpeed(recievedMSG));
-				recievedMSG = UART_receiveByte();
-			}
+			Forward();
 			break;
 		case 'B':
-			recievedMSG = UART_receiveByte();
-			while(recievedMSG >= '1' && recievedMSG <= '5')
-			{
-				DcMotor_Rotate(CCW, motorSpeed(recievedMSG));
-				recievedMSG = UART_receiveByte();
-			}
+			Backward();
 			break;
 		case 'S':
-			DcMotor_Rotate(STOP, MOTOR_STOP);
-			recievedMSG = UART_receiveByte();
+			Stop();
+			break;
+		case 'R':
+			Right_Forward();
+			break;
+		case 'L':
+			Left_Forward();
+			break;
+		case 'M':
+			DcMotor_Init(motorSpeed(UART_receiveByte()));
 			break;
 		}
 	}

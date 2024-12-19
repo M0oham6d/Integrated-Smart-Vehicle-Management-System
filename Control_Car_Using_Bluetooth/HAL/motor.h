@@ -1,6 +1,6 @@
 /***************************************************************************************************************
  * motor.h
- * Author: Muhammed Ayman
+ * Author: A7la Team
  * Module: DC Motor
  **************************************************************************************************************/
 
@@ -18,11 +18,17 @@
 #define MOTOR_THIRD_SPEED			(75)
 #define MOTOR_MAX_SPEED				(100)
 
-#define MOTOR_PORT_CONNECTION		PORTD_ID
-#define PIN_INT1					PIN6_ID
-#define PIN_INT2					PIN7_ID
-#define ENABLE_PORT_CONNECTION		PORTB_ID
-#define ENABLE_PIN					PIN3_ID
+#define MOTOR_PORT_CONNECTION		PORTA_ID
+#define PIN_INT1					PIN0_ID
+#define PIN_INT2					PIN1_ID
+#define PIN_INT3					PIN2_ID
+#define PIN_INT4					PIN3_ID
+
+#define ENABLE1_PORT_CONNECTION		PORTB_ID
+#define ENABLE1_PIN					PIN3_ID
+
+#define ENABLE2_PORT_CONNECTION		PORTD_ID
+#define ENABLE2_PIN					PIN7_ID
 
 /*******************************************************************************
  *                               Types Declaration                             *
@@ -40,7 +46,7 @@ typedef enum
 /*
  * Function to initialize DC motor.
  */
-void DcMotor_Init(void);
+void DcMotor_Init(uint8 MAXSPEED);
 
 /*
  * Function to rotate the motor.
@@ -48,5 +54,15 @@ void DcMotor_Init(void);
  * Control the motor speed using PWM.
  */
 void DcMotor_Rotate(DcMotor_State state, uint8 speed);
+
+void Forward(void);
+
+void Backward(void);
+
+void Stop(void);
+
+void Right_Forward();
+
+void Left_Forward();
 
 #endif /* HAL_MOTOR_H_ */

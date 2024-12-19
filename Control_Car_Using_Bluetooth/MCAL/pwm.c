@@ -1,6 +1,6 @@
 /***************************************************************************************************************
  * pwm.c
- * Author: Muhammed Ayman
+ * Author: A7la Team
  * Module: PWM
  **************************************************************************************************************/
 
@@ -29,4 +29,24 @@ void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr)
 	 * 4. clock
 	 */
 	TCCR0 = (1<<WGM00) | (1<<WGM01) | ((Config_Ptr->mode)<<COM00) | ((Config_Ptr->timer_clock)<<CS00);
+}
+
+/*
+ * Function to initialize Timer2 with Fast PWM mode.
+ */
+void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr)
+{
+	TCNT2 = 0; 							/* Set Timer Initial value. */
+
+	OCR2  = (Config_Ptr->duty_cycle * 255) / 100; 	/* Set Compare Value for duty cycle. */
+
+	DDRD  = DDRD | (1<<PD7); 			/* Set PD7/OC2 as output pin --> pin where the PWM signal is generated. */
+
+	/* Configure Timer/Counter Control Register for Timer2
+	 * 1. Fast PWM mode FOC2=0
+	 * 2. Fast PWM Mode WGM21=1 & WGM20=1
+	 * 3. Clear OC2 on compare match (non-inverted mode) COM20=0 & COM21=1
+	 * 4. Set clock source as per Config_Ptr->timer_clock
+	 */
+	TCCR2 = (1<<WGM20) | (1<<WGM21) | ((Config_Ptr->mode)<<COM20) | ((Config_Ptr->timer_clock)<<CS20);
 }
