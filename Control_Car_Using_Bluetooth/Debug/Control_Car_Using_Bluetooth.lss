@@ -3617,7 +3617,7 @@ void Forward(){
     1794:	de bf       	out	0x3e, r29	; 62
     1796:	0f be       	out	0x3f, r0	; 63
     1798:	cd bf       	out	0x3d, r28	; 61
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     179a:	18 8a       	std	Y+16, r1	; 0x10
     179c:	1f 86       	std	Y+15, r1	; 0x0f
     179e:	81 c0       	rjmp	.+258    	; 0x18a2 <Forward+0x11c>
@@ -3779,7 +3779,7 @@ _delay_loop_2(uint16_t __count)
 }
 
 void Forward(){
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     1898:	8f 85       	ldd	r24, Y+15	; 0x0f
     189a:	98 89       	ldd	r25, Y+16	; 0x10
     189c:	0a 96       	adiw	r24, 0x0a	; 10
@@ -3790,9 +3790,9 @@ void Forward(){
     18a8:	30 e0       	ldi	r19, 0x00	; 0
     18aa:	8f 85       	ldd	r24, Y+15	; 0x0f
     18ac:	98 89       	ldd	r25, Y+16	; 0x10
-    18ae:	82 17       	cp	r24, r18
-    18b0:	93 07       	cpc	r25, r19
-    18b2:	0c f4       	brge	.+2      	; 0x18b6 <Forward+0x130>
+    18ae:	28 17       	cp	r18, r24
+    18b0:	39 07       	cpc	r19, r25
+    18b2:	0c f0       	brlt	.+2      	; 0x18b6 <Forward+0x130>
     18b4:	75 cf       	rjmp	.-278    	; 0x17a0 <Forward+0x1a>
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(CW, i);
@@ -3822,7 +3822,7 @@ void Backward(){
     18d6:	de bf       	out	0x3e, r29	; 62
     18d8:	0f be       	out	0x3f, r0	; 63
     18da:	cd bf       	out	0x3d, r28	; 61
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     18dc:	18 8a       	std	Y+16, r1	; 0x10
     18de:	1f 86       	std	Y+15, r1	; 0x0f
     18e0:	81 c0       	rjmp	.+258    	; 0x19e4 <Backward+0x11c>
@@ -3978,7 +3978,7 @@ _delay_ms(double __ms)
 }
 
 void Backward(){
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     19da:	8f 85       	ldd	r24, Y+15	; 0x0f
     19dc:	98 89       	ldd	r25, Y+16	; 0x10
     19de:	0a 96       	adiw	r24, 0x0a	; 10
@@ -3989,9 +3989,9 @@ void Backward(){
     19ea:	30 e0       	ldi	r19, 0x00	; 0
     19ec:	8f 85       	ldd	r24, Y+15	; 0x0f
     19ee:	98 89       	ldd	r25, Y+16	; 0x10
-    19f0:	82 17       	cp	r24, r18
-    19f2:	93 07       	cpc	r25, r19
-    19f4:	0c f4       	brge	.+2      	; 0x19f8 <Backward+0x130>
+    19f0:	28 17       	cp	r18, r24
+    19f2:	39 07       	cpc	r19, r25
+    19f4:	0c f0       	brlt	.+2      	; 0x19f8 <Backward+0x130>
     19f6:	75 cf       	rjmp	.-278    	; 0x18e2 <Backward+0x1a>
 		DcMotor1_Rotate(CCW, i);
 		DcMotor2_Rotate(CCW, i);
@@ -4041,7 +4041,7 @@ void Right_Forward(){
     1a36:	de bf       	out	0x3e, r29	; 62
     1a38:	0f be       	out	0x3f, r0	; 63
     1a3a:	cd bf       	out	0x3d, r28	; 61
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     1a3c:	18 8a       	std	Y+16, r1	; 0x10
     1a3e:	1f 86       	std	Y+15, r1	; 0x0f
     1a40:	80 c0       	rjmp	.+256    	; 0x1b42 <Right_Forward+0x11a>
@@ -4196,7 +4196,7 @@ _delay_ms(double __ms)
 }
 
 void Right_Forward(){
-	for(int i = 0 ;i < max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     1b38:	8f 85       	ldd	r24, Y+15	; 0x0f
     1b3a:	98 89       	ldd	r25, Y+16	; 0x10
     1b3c:	0a 96       	adiw	r24, 0x0a	; 10
@@ -4207,9 +4207,9 @@ void Right_Forward(){
     1b48:	30 e0       	ldi	r19, 0x00	; 0
     1b4a:	8f 85       	ldd	r24, Y+15	; 0x0f
     1b4c:	98 89       	ldd	r25, Y+16	; 0x10
-    1b4e:	82 17       	cp	r24, r18
-    1b50:	93 07       	cpc	r25, r19
-    1b52:	0c f4       	brge	.+2      	; 0x1b56 <Right_Forward+0x12e>
+    1b4e:	28 17       	cp	r18, r24
+    1b50:	39 07       	cpc	r19, r25
+    1b52:	0c f0       	brlt	.+2      	; 0x1b56 <Right_Forward+0x12e>
     1b54:	76 cf       	rjmp	.-276    	; 0x1a42 <Right_Forward+0x1a>
 		DcMotor1_Rotate(STOP, 0);
 		DcMotor2_Rotate(CW, i);
@@ -4239,7 +4239,7 @@ void Left_Forward(){
     1b76:	de bf       	out	0x3e, r29	; 62
     1b78:	0f be       	out	0x3f, r0	; 63
     1b7a:	cd bf       	out	0x3d, r28	; 61
-	for(int i = 0 ;i <  max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     1b7c:	18 8a       	std	Y+16, r1	; 0x10
     1b7e:	1f 86       	std	Y+15, r1	; 0x0f
     1b80:	80 c0       	rjmp	.+256    	; 0x1c82 <Left_Forward+0x11a>
@@ -4394,7 +4394,7 @@ _delay_ms(double __ms)
 }
 
 void Left_Forward(){
-	for(int i = 0 ;i <  max_Speed; i = i+10){
+	for(int i = 0 ;i <= max_Speed; i = i+10){
     1c78:	8f 85       	ldd	r24, Y+15	; 0x0f
     1c7a:	98 89       	ldd	r25, Y+16	; 0x10
     1c7c:	0a 96       	adiw	r24, 0x0a	; 10
@@ -4405,9 +4405,9 @@ void Left_Forward(){
     1c88:	30 e0       	ldi	r19, 0x00	; 0
     1c8a:	8f 85       	ldd	r24, Y+15	; 0x0f
     1c8c:	98 89       	ldd	r25, Y+16	; 0x10
-    1c8e:	82 17       	cp	r24, r18
-    1c90:	93 07       	cpc	r25, r19
-    1c92:	0c f4       	brge	.+2      	; 0x1c96 <Left_Forward+0x12e>
+    1c8e:	28 17       	cp	r18, r24
+    1c90:	39 07       	cpc	r19, r25
+    1c92:	0c f0       	brlt	.+2      	; 0x1c96 <Left_Forward+0x12e>
     1c94:	76 cf       	rjmp	.-276    	; 0x1b82 <Left_Forward+0x1a>
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(STOP, 0);

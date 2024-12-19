@@ -96,7 +96,7 @@ void DcMotor2_Rotate( DcMotor_State state, uint8 speed)
 }
 
 void Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+	for(int i = 0 ;i < max_Speed; i = i+10){
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(CW, i);
 		_delay_ms(30);
@@ -104,7 +104,7 @@ void Forward(){
 }
 
 void Backward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+	for(int i = 0 ;i < max_Speed; i = i+10){
 		DcMotor1_Rotate(CCW, i);
 		DcMotor2_Rotate(CCW, i);
 		_delay_ms(30);
@@ -117,7 +117,7 @@ void Stop(void){
 }
 
 void Right_Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+	for(int i = 0 ;i < max_Speed; i = i+10){
 		DcMotor1_Rotate(STOP, 0);
 		DcMotor2_Rotate(CW, i);
 		_delay_ms(30);
@@ -125,7 +125,7 @@ void Right_Forward(){
 }
 
 void Left_Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+	for(int i = 0 ;i <  max_Speed; i = i+10){
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(STOP, 0);
 		_delay_ms(30);
