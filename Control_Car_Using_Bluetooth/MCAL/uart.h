@@ -14,25 +14,25 @@
  *******************************************************************************/
 typedef enum
 {
-    UART_Parity_NONE, UART_Parity_EVEN = 2, UART_Parity_ODD = 3
+	UART_Parity_NONE, UART_Parity_EVEN = 2, UART_Parity_ODD = 3
 } UART_Parity;
 
 typedef enum
 {
-    UART_STOP_1_BIT, UART_STOP_2_BIT
+	UART_STOP_1_BIT, UART_STOP_2_BIT
 } UART_StopBit;
 
 typedef enum
 {
-    MODE_FIVE_BIT, MODE_SIX_BIT, MODE_SEVEN_BIT, MODE_EIGHT_BIT
+	MODE_FIVE_BIT, MODE_SIX_BIT, MODE_SEVEN_BIT, MODE_EIGHT_BIT
 } UART_BitDataType;
 
 typedef struct
 {
-    uint32 baudRate;
-    UART_Parity Parity_Configurations;
-    UART_StopBit StopBit_Configurations;
-    UART_BitDataType bit_data;
+	uint32 baudRate;
+	UART_Parity Parity_Configurations;
+	UART_StopBit StopBit_Configurations;
+	UART_BitDataType bit_data;
 } UART_ConfigType;
 
 /*******************************************************************************

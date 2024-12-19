@@ -8,7 +8,7 @@
 #include <avr/io.h>
 
 /*******************************************************************************
- *                      	Functions Definitions                              *
+ *                        Functions Definitions                                *
  *******************************************************************************/
 
 /*
@@ -16,11 +16,11 @@
  */
 void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr)
 {
-	TCNT0 = 0; 							/* Set Timer Initial value. */
+	TCNT0 = 0;                             /* Set Timer Initial value. */
 
-	OCR0  = (Config_Ptr->duty_cycle * 255) / 100; 	/* Set Compare Value. */
+	OCR0  = (Config_Ptr->duty_cycle * 255) / 100;    /* Set Compare Value. */
 
-	DDRB  = DDRB | (1<<PB3); 			/* set PB3/OC0 as output pin --> pin where the PWM signal is generated from MC. */
+	DDRB  = DDRB | (1<<PB3);               /* set PB3/OC0 as output pin --> pin where the PWM signal is generated from MC. */
 
 	/* Configure timer control register
 	 * 1. Fast PWM mode FOC0=0
@@ -36,11 +36,11 @@ void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr)
  */
 void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr)
 {
-	TCNT2 = 0; 							/* Set Timer Initial value. */
+	TCNT2 = 0;                             /* Set Timer Initial value. */
 
-	OCR2  = (Config_Ptr->duty_cycle * 255) / 100; 	/* Set Compare Value for duty cycle. */
+	OCR2  = (Config_Ptr->duty_cycle * 255) / 100;    /* Set Compare Value for duty cycle. */
 
-	DDRD  = DDRD | (1<<PD7); 			/* Set PD7/OC2 as output pin --> pin where the PWM signal is generated. */
+	DDRD  = DDRD | (1<<PD7);               /* Set PD7/OC2 as output pin --> pin where the PWM signal is generated. */
 
 	/* Configure Timer/Counter Control Register for Timer2
 	 * 1. Fast PWM mode FOC2=0

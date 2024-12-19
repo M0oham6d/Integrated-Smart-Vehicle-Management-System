@@ -1,9 +1,8 @@
-/*
+/***************************************************************************************************************
  * Control_Car_Using_Bluetooth.c
- *
- *  Created on: Dec 15, 2024
- *      Author: A7la Team
- */
+ * Author: A7la Team
+ * Module: APPLICATION
+ **************************************************************************************************************/
 
 #include "../HAL/motor.h"
 #include "../MCAL/uart.h"
@@ -11,6 +10,10 @@
 #include <stdlib.h>
 #include <util/delay.h>
 
+/*
+ * Description:
+ * Function to convert speed character to numerical value.
+ */
 uint8 motorSpeed(uint8 speed)
 {
 	switch(speed)
@@ -24,23 +27,25 @@ uint8 motorSpeed(uint8 speed)
 	case '3':
 		return 100;
 		break;
+	default:
+		return 0; // Default case to handle unexpected input
 	}
 }
 
 int main(void)
 {
-	uint8 recievedMSG;
+	uint8 receivedMSG;
 
-	UART_ConfigType uart_configratoin = {9600, UART_Parity_NONE, UART_STOP_1_BIT, MODE_EIGHT_BIT};
-	UART_init(&uart_configratoin);
+	UART_ConfigType uart_configuration = {9600, UART_Parity_NONE, UART_STOP_1_BIT, MODE_EIGHT_BIT};
+	UART_init(&uart_configuration);
 
 	DcMotor_Init(motorSpeed(UART_receiveByte()));
 
 	while(1)
 	{
-		recievedMSG = UART_receiveByte();
+		receivedMSG = UART_receiveByte();
 
-		switch(recievedMSG)
+		switch(receivedMSG)
 		{
 		case 'F':
 			Forward();
@@ -59,6 +64,9 @@ int main(void)
 			break;
 		case 'M':
 			DcMotor_Init(motorSpeed(UART_receiveByte()));
+			break;
+		default:
+			// Handle unexpected input
 			break;
 		}
 	}

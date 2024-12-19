@@ -152,7 +152,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1f02
+.text           0x00000000     0x1efa
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -336,29 +336,29 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00001b68      0x140 ./HAL/motor.o
                 0x00001b68                Left_Forward
  .text.motorSpeed
-                0x00001ca8       0x62 ./APPLICATION/Control_Car_Using_Bluetooth.o
+                0x00001ca8       0x5a ./APPLICATION/Control_Car_Using_Bluetooth.o
                 0x00001ca8                motorSpeed
- .text.main     0x00001d0a       0xf4 ./APPLICATION/Control_Car_Using_Bluetooth.o
-                0x00001d0a                main
- .text.libgcc   0x00001dfe       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00001dfe                __divmodhi4
-                0x00001dfe                _div
- .text.libgcc   0x00001e24       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00001e24                __udivmodsi4
- .text.libgcc   0x00001e68        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00001e68        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00001e68        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00001e68       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00001e68                __udivmodhi4
- .text.libgcc   0x00001e90       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00001e90                __prologue_saves__
- .text.libgcc   0x00001ec8       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00001ec8                __epilogue_restores__
-                0x00001efe                . = ALIGN (0x2)
+ .text.main     0x00001d02       0xf4 ./APPLICATION/Control_Car_Using_Bluetooth.o
+                0x00001d02                main
+ .text.libgcc   0x00001df6       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00001df6                __divmodhi4
+                0x00001df6                _div
+ .text.libgcc   0x00001e1c       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00001e1c                __udivmodsi4
+ .text.libgcc   0x00001e60        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001e60        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001e60        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00001e60       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001e60                __udivmodhi4
+ .text.libgcc   0x00001e88       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00001e88                __prologue_saves__
+ .text.libgcc   0x00001ec0       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00001ec0                __epilogue_restores__
+                0x00001ef6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001efe        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00001efe                exit
-                0x00001efe                _exit
+ .fini9         0x00001ef6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001ef6                exit
+                0x00001ef6                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -377,11 +377,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001efe        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001ef6        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00001f02                _etext = .
+                0x00001efa                _etext = .
 
-.data           0x00800060       0x10 load address 0x00001f02
+.data           0x00800060       0x10 load address 0x00001efa
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -413,7 +413,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.data*)
  *(.rodata)
  *(.rodata*)
- .rodata.C.0.1444
+ .rodata.C.0.1447
                 0x00800068        0x7 ./APPLICATION/Control_Car_Using_Bluetooth.o
  *(.gnu.linkonce.d*)
                 0x00800070                . = ALIGN (0x2)
@@ -455,8 +455,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800070                max_Speed
  *(COMMON)
                 0x00800071                PROVIDE (__bss_end, .)
-                0x00001f02                __data_load_start = LOADADDR (.data)
-                0x00001f12                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001efa                __data_load_start = LOADADDR (.data)
+                0x00001f0a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800071        0x0
                 0x00800071                PROVIDE (__noinit_start, .)
@@ -481,7 +481,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1d34
+.stab           0x00000000     0x1d40
  *(.stab)
  .stab          0x00000000      0x864 ./MCAL/gpio.o
  .stab          0x00000864      0x234 ./MCAL/pwm.o
@@ -490,12 +490,12 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x738 (size before relaxing)
  .stab          0x00000f90      0x9e4 ./HAL/motor.o
                                 0xb70 (size before relaxing)
- .stab          0x00001974      0x3c0 ./APPLICATION/Control_Car_Using_Bluetooth.o
-                                0x558 (size before relaxing)
+ .stab          0x00001974      0x3cc ./APPLICATION/Control_Car_Using_Bluetooth.o
+                                0x564 (size before relaxing)
 
-.stabstr        0x00000000     0x1513
+.stabstr        0x00000000     0x1514
  *(.stabstr)
- .stabstr       0x00000000     0x1513 ./MCAL/gpio.o
+ .stabstr       0x00000000     0x1514 ./MCAL/gpio.o
 
 .stab.excl
  *(.stab.excl)

@@ -9,7 +9,7 @@
 #include "../Common_Macros/common_macros.h"
 
 /*******************************************************************************
- *                      	Functions Definitions                              *
+ *                        Functions Definitions                                *
  *******************************************************************************/
 
 /*
@@ -154,7 +154,7 @@ uint8 GPIO_readPin(uint8 port_num, uint8 pin_num)
 
 	/*
 	 * Check if the input port number is greater than NUM_OF_PINS_PER_PORT value.
-	   Or if the input pin number is greater than NUM_OF_PINS_PER_PORT value.
+   Or if the input pin number is greater than NUM_OF_PINS_PER_PORT value.
 	 * In this case the input is not valid port/pin number
 	 */
 	if((pin_num >= NUM_OF_PINS_PER_PORT) || (port_num >= NUM_OF_PORTS))

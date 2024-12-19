@@ -10,12 +10,19 @@
 #include <util/delay.h>
 
 /*******************************************************************************
- *                      	Functions Definitions                              *
+ *                        Functions Definitions                                *
  *******************************************************************************/
-uint8 max_Speed = 0 ;
-static void Handel_Max_Speed(uint8 speed){
-	max_Speed = speed ;
+uint8 max_Speed = 0;
+
+/*
+ * Description:
+ * Helper function to handle the maximum speed setting.
+ */
+static void Handel_Max_Speed(uint8 speed)
+{
+	max_Speed = speed;
 }
+
 /*
  * Function to initialize DC motor.
  */
@@ -24,7 +31,7 @@ void DcMotor_Init(uint8 MAXSPEED)
 	/*
 	 * Setup pin direction for INT1 & INT2 as output.
 	 * Setup pin direction for Enable as output.
-	 * */
+	 */
 	/* For motor 1 */
 	Handel_Max_Speed(MAXSPEED);
 
@@ -49,7 +56,7 @@ void DcMotor_Init(uint8 MAXSPEED)
  * Rotate in CW or CCW or STOP the motor.
  * Control the motor speed using PWM.
  */
-void DcMotor1_Rotate( DcMotor_State state, uint8 speed)
+void DcMotor1_Rotate(DcMotor_State state, uint8 speed)
 {
 	Timer_ConfigType configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
 	PWM_Timer0_Start(&configrations);
@@ -72,7 +79,12 @@ void DcMotor1_Rotate( DcMotor_State state, uint8 speed)
 	}
 }
 
-void DcMotor2_Rotate( DcMotor_State state, uint8 speed)
+/*
+ * Function to rotate the second motor.
+ * Rotate in CW or CCW or STOP the motor.
+ * Control the motor speed using PWM.
+ */
+void DcMotor2_Rotate(DcMotor_State state, uint8 speed)
 {
 	Timer_ConfigType configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
 	PWM_Timer2_Start(&configrations);
@@ -95,37 +107,66 @@ void DcMotor2_Rotate( DcMotor_State state, uint8 speed)
 	}
 }
 
-void Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+/*
+ * Description:
+ * Function to move the car forward.
+ */
+void Forward(void)
+{
+	for(int i = 0; i <= max_Speed; i += 10)
+	{
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(CW, i);
 		_delay_ms(30);
 	}
 }
 
-void Backward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+/*
+ * Description:
+ * Function to move the car backward.
+ */
+void Backward(void)
+{
+	for(int i = 0; i <= max_Speed; i += 10)
+	{
 		DcMotor1_Rotate(CCW, i);
 		DcMotor2_Rotate(CCW, i);
 		_delay_ms(30);
 	}
 }
 
-void Stop(void){
+/*
+ * Description:
+ * Function to stop the car.
+ */
+void Stop(void)
+{
 	DcMotor1_Rotate(STOP, 0);
 	DcMotor2_Rotate(STOP, 0);
 }
 
-void Right_Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+/*
+ * Description:
+ * Function to turn the car right while moving forward.
+ */
+void Right_Forward(void)
+{
+	for(int i = 0; i <= max_Speed; i += 10)
+	{
 		DcMotor1_Rotate(STOP, 0);
 		DcMotor2_Rotate(CW, i);
 		_delay_ms(30);
 	}
 }
 
-void Left_Forward(){
-	for(int i = 0 ;i <= max_Speed; i = i+10){
+/*
+ * Description:
+ * Function to turn the car left while moving forward.
+ */
+void Left_Forward(void)
+{
+	for(int i = 0; i <= max_Speed; i += 10)
+	{
 		DcMotor1_Rotate(CW, i);
 		DcMotor2_Rotate(STOP, 0);
 		_delay_ms(30);

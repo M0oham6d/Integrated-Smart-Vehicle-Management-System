@@ -1568,3 +1568,709 @@ Data:         17 bytes (0.8% Full)
 
 Finished building: sizedummy
  
+22:14:45 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APPLICATION/Control_Car_Using_Bluetooth.c: In function 'motorSpeed':
+../APPLICATION/Control_Car_Using_Bluetooth.c:27: warning: control reaches end of non-void function
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:19:53 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building file: ../MCAL/pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/pwm.d" -MT"MCAL/pwm.o" -c -o "MCAL/pwm.o" "../MCAL/pwm.c"
+Finished building: ../MCAL/pwm.c
+ 
+Building file: ../MCAL/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/uart.d" -MT"MCAL/uart.o" -c -o "MCAL/uart.o" "../MCAL/uart.c"
+Finished building: ../MCAL/uart.c
+ 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APPLICATION/Control_Car_Using_Bluetooth.c: In function 'motorSpeed':
+../APPLICATION/Control_Car_Using_Bluetooth.c:27: warning: control reaches end of non-void function
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:20:23 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/uart.d" -MT"MCAL/uart.o" -c -o "MCAL/uart.o" "../MCAL/uart.c"
+Finished building: ../MCAL/uart.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:17 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/pwm.d" -MT"MCAL/pwm.o" -c -o "MCAL/pwm.o" "../MCAL/pwm.c"
+Finished building: ../MCAL/pwm.c
+ 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:21:34 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/pwm.d" -MT"MCAL/pwm.o" -c -o "MCAL/pwm.o" "../MCAL/pwm.c"
+Finished building: ../MCAL/pwm.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:22:43 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:42 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:24:44 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+../MCAL/gpio.c: In function 'GPIO_writePin':
+../MCAL/gpio.c:128: error: 'else' without a previous 'if'
+../MCAL/gpio.c:132: error: break statement not within loop or switch
+../MCAL/gpio.c:133: error: case label not within a switch statement
+../MCAL/gpio.c:142: error: break statement not within loop or switch
+../MCAL/gpio.c: At top level:
+../MCAL/gpio.c:145: error: expected identifier or '(' before '}' token
+make: *** [MCAL/gpio.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:24:56 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:25:38 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APPLICATION/Control_Car_Using_Bluetooth.c: In function 'motorSpeed':
+../APPLICATION/Control_Car_Using_Bluetooth.c:27: warning: control reaches end of non-void function
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:26:54 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:27:02 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:25 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:42 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building file: ../MCAL/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/uart.d" -MT"MCAL/uart.o" -c -o "MCAL/uart.o" "../MCAL/uart.c"
+Finished building: ../MCAL/uart.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7954 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:29:49 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:05 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:26 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
+Finished building: ../MCAL/gpio.c
+ 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:34 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/pwm.d" -MT"MCAL/pwm.o" -c -o "MCAL/pwm.o" "../MCAL/pwm.c"
+Finished building: ../MCAL/pwm.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:48 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Building file: ../MCAL/pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/pwm.d" -MT"MCAL/pwm.o" -c -o "MCAL/pwm.o" "../MCAL/pwm.c"
+Finished building: ../MCAL/pwm.c
+ 
+Building file: ../MCAL/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/uart.d" -MT"MCAL/uart.o" -c -o "MCAL/uart.o" "../MCAL/uart.c"
+Finished building: ../MCAL/uart.c
+ 
+Building file: ../HAL/motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/motor.d" -MT"HAL/motor.o" -c -o "HAL/motor.o" "../HAL/motor.c"
+In file included from ../HAL/motor.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/motor.c
+ 
+Building file: ../APPLICATION/Control_Car_Using_Bluetooth.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APPLICATION/Control_Car_Using_Bluetooth.d" -MT"APPLICATION/Control_Car_Using_Bluetooth.o" -c -o "APPLICATION/Control_Car_Using_Bluetooth.o" "../APPLICATION/Control_Car_Using_Bluetooth.c"
+In file included from ../APPLICATION/Control_Car_Using_Bluetooth.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APPLICATION/Control_Car_Using_Bluetooth.c
+ 
+Building target: Control_Car_Using_Bluetooth.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o   
+Finished building target: Control_Car_Using_Bluetooth.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
+Finished building: Control_Car_Using_Bluetooth.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
+Finished building: Control_Car_Using_Bluetooth.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:33:31 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7946 bytes (24.2% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

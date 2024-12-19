@@ -30,7 +30,7 @@ typedef struct
 }Timer_ConfigType;
 
 /*******************************************************************************
- *                      	Functions Prototypes                               *
+ *                        Functions Prototypes                                 *
  *******************************************************************************/
 
 /*
@@ -38,7 +38,9 @@ typedef struct
  */
 void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr);
 
+/*
+ * Function to initialize Timer2 with Fast PWM mode.
+ */
 void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr);
-
 
 #endif /* MCAL_PWM_H_ */
