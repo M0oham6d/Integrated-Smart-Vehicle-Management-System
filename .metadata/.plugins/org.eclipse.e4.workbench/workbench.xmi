@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_eHRZELvPEe-zJ-9YT_5i2g" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_eHRZEbvPEe-zJ-9YT_5i2g" bindingContexts="_eHSpbLvPEe-zJ-9YT_5i2g">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;standard_types.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;common_macros.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Control_Car_Using_Bluetooth.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.cdt.ui.ExternalEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stdlib.h&quot; tooltip=&quot;C:\WinAVR-20100110\avr\include\stdlib.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;C:\WinAVR-20100110\avr\include\stdlib.h&quot; project=&quot;Control_Car_Using_Bluetooth&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Car_Parking_Sensor.c&quot; tooltip=&quot;Car_Parking_Sensors/Application/Car_Parking_Sensor.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Car_Parking_Sensors/Application/Car_Parking_Sensor.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;standard_types.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;common_macros.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Control_Car_Using_Bluetooth.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.cdt.ui.ExternalEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stdlib.h&quot; tooltip=&quot;C:\WinAVR-20100110\avr\include\stdlib.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;C:\WinAVR-20100110\avr\include\stdlib.h&quot; project=&quot;Control_Car_Using_Bluetooth&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_eHRZEbvPEe-zJ-9YT_5i2g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_eHRZErvPEe-zJ-9YT_5i2g" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="976" height="1028">
     <persistedState key="coolBarVisible" value="true"/>
@@ -73,7 +73,7 @@
           <tags>persp.viewSC:de.innot.avreclipse.views.supportedmcus</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_eHRZFbvPEe-zJ-9YT_5i2g" selectedElement="_eHRZGrvPEe-zJ-9YT_5i2g" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_eHRZFrvPEe-zJ-9YT_5i2g" elementId="topLeft" containerData="1519" selectedElement="_eHRZF7vPEe-zJ-9YT_5i2g">
-              <tags>MinimizedByZoom</tags>
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_eHRZF7vPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_eHSBtLvPEe-zJ-9YT_5i2g" closeable="true">
                 <tags>View</tags>
                 <tags>categoryTag:General</tags>
@@ -87,14 +87,10 @@
                 <tags>categoryTag:General</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_eHRZGrvPEe-zJ-9YT_5i2g" containerData="8481" selectedElement="_eHRZG7vPEe-zJ-9YT_5i2g">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_eHRZGrvPEe-zJ-9YT_5i2g" containerData="8481" selectedElement="_eHRZIrvPEe-zJ-9YT_5i2g">
               <children xsi:type="basic:PartSashContainer" xmi:id="_eHRZG7vPEe-zJ-9YT_5i2g" containerData="7500" selectedElement="_eHRZHLvPEe-zJ-9YT_5i2g" horizontal="true">
-                <children xsi:type="advanced:Placeholder" xmi:id="_eHRZHLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.editorss" containerData="7804" ref="_eHSBrrvPEe-zJ-9YT_5i2g">
-                  <tags>Maximized</tags>
-                </children>
-                <children xsi:type="basic:PartStack" xmi:id="_eHRZHbvPEe-zJ-9YT_5i2g" elementId="topRight" visible="false" containerData="2196" selectedElement="_eHRZHrvPEe-zJ-9YT_5i2g">
-                  <tags>Minimized</tags>
-                  <tags>MinimizedByZoom</tags>
+                <children xsi:type="advanced:Placeholder" xmi:id="_eHRZHLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.editorss" containerData="7804" ref="_eHSBrrvPEe-zJ-9YT_5i2g"/>
+                <children xsi:type="basic:PartStack" xmi:id="_eHRZHbvPEe-zJ-9YT_5i2g" elementId="topRight" containerData="2196" selectedElement="_eHRZHrvPEe-zJ-9YT_5i2g">
                   <children xsi:type="advanced:Placeholder" xmi:id="_eHRZHrvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.views.ContentOutline" ref="_eHSCNrvPEe-zJ-9YT_5i2g" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
@@ -114,7 +110,6 @@
                 </children>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_eHRZIrvPEe-zJ-9YT_5i2g" elementId="bottom" containerData="2500" selectedElement="_eHRZJbvPEe-zJ-9YT_5i2g">
-                <tags>MinimizedByZoom</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_eHRZI7vPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.views.ProblemView" ref="_eHSCC7vPEe-zJ-9YT_5i2g" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -188,78 +183,9 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_eHSBrrvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.editorss" selectedElement="_eHSBr7vPEe-zJ-9YT_5i2g">
-      <children xsi:type="basic:PartStack" xmi:id="_eHSBr7vPEe-zJ-9YT_5i2g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_eHSBsLvPEe-zJ-9YT_5i2g">
+      <children xsi:type="basic:PartStack" xmi:id="_eHSBr7vPEe-zJ-9YT_5i2g" elementId="org.eclipse.e4.primaryDataStack">
         <tags>EditorStack</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
-        <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_eHSBsLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Control_Car_Using_Bluetooth.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Control_Car_Using_Bluetooth.c&quot; partName=&quot;Control_Car_Using_Bluetooth.c&quot; title=&quot;Control_Car_Using_Bluetooth.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/APPLICATION/Control_Car_Using_Bluetooth.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;597&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_LF2RgLzKEe-mU-EUk9tgOg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="motor.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.c&quot; partName=&quot;motor.c&quot; title=&quot;motor.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;4393&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;1605&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_1J2pYLzLEe-mU-EUk9tgOg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pwm.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.c&quot; partName=&quot;pwm.c&quot; title=&quot;pwm.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;2055&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;621&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_vMkT0L5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="standard_types.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;standard_types.h&quot; partName=&quot;standard_types.h&quot; title=&quot;standard_types.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/Standard_Types/standard_types.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;495&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_vyXIgL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="uart.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.h&quot; partName=&quot;uart.h&quot; title=&quot;uart.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;2508&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;1403&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_wJcy0L5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="uart.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;uart.c&quot; partName=&quot;uart.c&quot; title=&quot;uart.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/uart.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/uart.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;4653&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;3220&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_wWgXYL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pwm.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;pwm.h&quot; partName=&quot;pwm.h&quot; title=&quot;pwm.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/pwm.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;1420&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;454&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_wsRzEL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="gpio.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.h&quot; partName=&quot;gpio.h&quot; title=&quot;gpio.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;3690&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;644&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_w_DlIL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="gpio.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;gpio.c&quot; partName=&quot;gpio.c&quot; title=&quot;gpio.c&quot; tooltip=&quot;Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/MCAL/gpio.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;7123&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;2714&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_xevKwL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="motor.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;motor.h&quot; partName=&quot;motor.h&quot; title=&quot;motor.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/HAL/motor.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/HAL/motor.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2104&quot; selectionTopPixel=&quot;960&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_x8dBgL5FEe-TlrjxBMMWkQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="common_macros.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;common_macros.h&quot; partName=&quot;common_macros.h&quot; title=&quot;common_macros.h&quot; tooltip=&quot;Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Control_Car_Using_Bluetooth/Common_Macros/common_macros.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;1264&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_eHSBtLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
@@ -268,6 +194,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1734221916574&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_eHSBtbvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -378,7 +306,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSCYLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_YbwcML5KEe-_2cOGVhlSbw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_eHWTDbvPEe-zJ-9YT_5i2g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DtmZwL8IEe-be9sGFYLztQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_eHWTDbvPEe-zJ-9YT_5i2g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSnN7vPEe-zJ-9YT_5i2g" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -386,8 +314,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSnObvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_YbyRYL5KEe-_2cOGVhlSbw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_eHVs17vPEe-zJ-9YT_5i2g"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_YbyRYb5KEe-_2cOGVhlSbw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" command="_eHWRxrvPEe-zJ-9YT_5i2g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DtnA0r8IEe-be9sGFYLztQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_eHVs17vPEe-zJ-9YT_5i2g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DtoO8L8IEe-be9sGFYLztQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_eHWRxrvPEe-zJ-9YT_5i2g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSnPbvPEe-zJ-9YT_5i2g" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -414,7 +342,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSnk7vPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Yb0GkL5KEe-_2cOGVhlSbw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_eHWSvLvPEe-zJ-9YT_5i2g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DtpdEL8IEe-be9sGFYLztQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_eHWSvLvPEe-zJ-9YT_5i2g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_eHSnn7vPEe-zJ-9YT_5i2g" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -463,8 +391,8 @@
         <tags>Draggable</tags>
       </children>
     </trimBars>
-    <trimBars xmi:id="_eHSnwLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right">
-      <children xsi:type="menu:ToolControl" xmi:id="_eHSnwbvPEe-zJ-9YT_5i2g" elementId="topRight(IDEWindow).(org.eclipse.cdt.ui.CPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+    <trimBars xmi:id="_eHSnwLvPEe-zJ-9YT_5i2g" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" toBeRendered="false" side="Right">
+      <children xsi:type="menu:ToolControl" xmi:id="_eHSnwbvPEe-zJ-9YT_5i2g" elementId="topRight(IDEWindow).(org.eclipse.cdt.ui.CPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
