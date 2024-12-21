@@ -8,9 +8,11 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include MCAL/subdir.mk
--include HAL/subdir.mk
--include APPLICATION/subdir.mk
+-include MCAL/UART/subdir.mk
+-include MCAL/PWM/subdir.mk
+-include MCAL/GPIO/subdir.mk
+-include HAL/MOTOR/subdir.mk
+-include APP/subdir.mk
 -include subdir.mk
 -include objects.mk
 

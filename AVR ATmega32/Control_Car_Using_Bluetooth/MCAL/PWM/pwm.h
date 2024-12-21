@@ -1,0 +1,47 @@
+/******************************************************************************
+ * Module       : PWM
+ * File Name    : pwm.h
+ * Author       : A7la Team :)
+ * Created on   : 15/11/2024
+ * Description  : Header file for the PWM AVR driver
+ *******************************************************************************/
+#ifndef MCAL_PWM_H_
+#define MCAL_PWM_H_
+
+#include "../../LIB/std_types.h"
+
+/*******************************************************************************
+ *                         Types Declaration                                   *
+ *******************************************************************************/
+typedef enum
+{
+    NON_INVERTING = 2, INVERTING  // PWM modes: Non-inverting and Inverting
+} PWM_Mode;
+
+typedef enum
+{
+    NO_CLOCK, F_CPU_CLOCK, F_CPU_8, F_CPU_64, F_CPU_256, F_CPU_1024  // Timer clock types
+} Timer_ClockType;
+
+typedef struct
+{
+    PWM_Mode mode;            // PWM mode
+    Timer_ClockType timer_clock;  // Timer clock type
+    uint8 duty_cycle;         // Duty cycle percentage
+} Timer_ConfigType;
+
+/*******************************************************************************
+ *                        Functions Prototypes                                 *
+ *******************************************************************************/
+
+/*
+ * Function to initialize Timer0 with Fast PWM mode.
+ */
+void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr);
+
+/*
+ * Function to initialize Timer2 with Fast PWM mode.
+ */
+void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr);
+
+#endif /* MCAL_PWM_H_ */
