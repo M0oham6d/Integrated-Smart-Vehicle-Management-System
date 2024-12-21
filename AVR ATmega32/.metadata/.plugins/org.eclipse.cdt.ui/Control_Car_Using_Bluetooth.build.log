@@ -1,4 +1,4 @@
-22:30:51 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+22:39:08 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
@@ -16,5 +16,5 @@ Data:         17 bytes (0.8% Full)
 Finished building: sizedummy
  
 
-22:30:51 Build Finished. 0 errors, 0 warnings. (took 262ms)
+22:39:09 Build Finished. 0 errors, 0 warnings. (took 407ms)
 

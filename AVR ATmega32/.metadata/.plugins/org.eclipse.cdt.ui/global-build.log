@@ -214,3 +214,37 @@ Data:        321 bytes (15.7% Full)
 
 Finished building: sizedummy
  
+22:39:08 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7870 bytes (24.0% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:39:09 **** Incremental Build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Two_Ultrasonics_Plus_Two_IRs.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   17166 bytes (52.4% Full)
+(.text + .data + .bootloader)
+
+Data:        321 bytes (15.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
