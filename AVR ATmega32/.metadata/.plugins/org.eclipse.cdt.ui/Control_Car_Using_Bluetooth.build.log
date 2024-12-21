@@ -1,26 +1,5 @@
-21:31:32 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+22:30:51 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
 make all 
-Building file: ../APP/Control_Car_Using_Bluetooth.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Control_Car_Using_Bluetooth.d" -MT"APP/Control_Car_Using_Bluetooth.o" -c -o "APP/Control_Car_Using_Bluetooth.o" "../APP/Control_Car_Using_Bluetooth.c"
-In file included from ../APP/Control_Car_Using_Bluetooth.h:16,
-                 from ../APP/Control_Car_Using_Bluetooth.c:7:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../APP/Control_Car_Using_Bluetooth.c
- 
-Building target: Control_Car_Using_Bluetooth.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/UART/uart.o  ./MCAL/PWM/pwm.o  ./MCAL/GPIO/gpio.o  ./HAL/MOTOR/motor.o  ./APP/Control_Car_Using_Bluetooth.o   
-Finished building target: Control_Car_Using_Bluetooth.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
-Finished building: Control_Car_Using_Bluetooth.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
-Finished building: Control_Car_Using_Bluetooth.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
 AVR Memory Usage
@@ -37,5 +16,5 @@ Data:         17 bytes (0.8% Full)
 Finished building: sizedummy
  
 
-21:31:33 Build Finished. 0 errors, 1 warnings. (took 662ms)
+22:30:51 Build Finished. 0 errors, 0 warnings. (took 262ms)
 

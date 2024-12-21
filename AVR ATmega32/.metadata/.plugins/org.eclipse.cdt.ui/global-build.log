@@ -1,171 +1,125 @@
-21:25:10 **** Clean-only build of configuration Debug for project Control_Car_Using_Bluetooth ****
+22:28:20 **** Clean-only build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
 make clean 
-rm -rf  Control_Car_Using_Bluetooth.hex  ./MCAL/gpio.o ./MCAL/pwm.o ./MCAL/uart.o  ./HAL/motor.o  ./APPLICATION/Control_Car_Using_Bluetooth.o  sizedummy  Control_Car_Using_Bluetooth.lss  ./MCAL/gpio.d ./MCAL/pwm.d ./MCAL/uart.d  ./HAL/motor.d  ./APPLICATION/Control_Car_Using_Bluetooth.d  Control_Car_Using_Bluetooth.elf
+rm -rf  ./MCAL/adc.o ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/icu.o ./MCAL/timer.o  ./HAL/buzzer.o ./HAL/ir_sensor.o ./HAL/lcd.o ./HAL/three_leds.o ./HAL/ultrasonic_sensor.o  ./Application/Car_Parking_Sensor.o  sizedummy  Car_Parking_Sensors.lss  ./MCAL/adc.d ./MCAL/external_interrupts.d ./MCAL/gpio.d ./MCAL/icu.d ./MCAL/timer.d  ./HAL/buzzer.d ./HAL/ir_sensor.d ./HAL/lcd.d ./HAL/three_leds.d ./HAL/ultrasonic_sensor.d  ./Application/Car_Parking_Sensor.d  Car_Parking_Sensors.elf
  
-21:25:47 **** Incremental Build of configuration Debug for project Car_Parking_Sensors ****
+22:28:34 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
 make all 
-Building file: ../MCAL/adc.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/adc.d" -MT"MCAL/adc.o" -c -o "MCAL/adc.o" "../MCAL/adc.c"
-Finished building: ../MCAL/adc.c
- 
-Building file: ../MCAL/external_interrupts.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/external_interrupts.d" -MT"MCAL/external_interrupts.o" -c -o "MCAL/external_interrupts.o" "../MCAL/external_interrupts.c"
-../MCAL/external_interrupts.c: In function 'external_interrupt_setCallBack':
-../MCAL/external_interrupts.c:163: warning: function return types not compatible due to 'volatile'
-../MCAL/external_interrupts.c:166: warning: function return types not compatible due to 'volatile'
-../MCAL/external_interrupts.c:169: warning: function return types not compatible due to 'volatile'
-Finished building: ../MCAL/external_interrupts.c
- 
-Building file: ../MCAL/gpio.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/gpio.d" -MT"MCAL/gpio.o" -c -o "MCAL/gpio.o" "../MCAL/gpio.c"
-Finished building: ../MCAL/gpio.c
- 
-Building file: ../MCAL/icu.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/icu.d" -MT"MCAL/icu.o" -c -o "MCAL/icu.o" "../MCAL/icu.c"
-../MCAL/icu.c: In function 'ICU_setCallBack':
-../MCAL/icu.c:73: warning: function return types not compatible due to 'volatile'
-Finished building: ../MCAL/icu.c
- 
-Building file: ../MCAL/timer.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/timer.d" -MT"MCAL/timer.o" -c -o "MCAL/timer.o" "../MCAL/timer.c"
-../MCAL/timer.c: In function 'Timer_getTimerValue':
-../MCAL/timer.c:282: warning: control reaches end of non-void function
-../MCAL/timer.c: In function 'Timer_setCallBack':
-../MCAL/timer.c:292: warning: function return types not compatible due to 'volatile'
-../MCAL/timer.c:295: warning: function return types not compatible due to 'volatile'
-../MCAL/timer.c:298: warning: function return types not compatible due to 'volatile'
-Finished building: ../MCAL/timer.c
- 
-Building file: ../HAL/buzzer.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/buzzer.d" -MT"HAL/buzzer.o" -c -o "HAL/buzzer.o" "../HAL/buzzer.c"
-Finished building: ../HAL/buzzer.c
- 
-Building file: ../HAL/ir_sensor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/ir_sensor.d" -MT"HAL/ir_sensor.o" -c -o "HAL/ir_sensor.o" "../HAL/ir_sensor.c"
-Finished building: ../HAL/ir_sensor.c
- 
-Building file: ../HAL/lcd.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" -c -o "HAL/lcd.o" "../HAL/lcd.c"
-In file included from ../HAL/lcd.h:11,
-                 from ../HAL/lcd.c:7:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../HAL/lcd.c
- 
-Building file: ../HAL/three_leds.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/three_leds.d" -MT"HAL/three_leds.o" -c -o "HAL/three_leds.o" "../HAL/three_leds.c"
-Finished building: ../HAL/three_leds.c
- 
-Building file: ../HAL/ultrasonic_sensor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/ultrasonic_sensor.d" -MT"HAL/ultrasonic_sensor.o" -c -o "HAL/ultrasonic_sensor.o" "../HAL/ultrasonic_sensor.c"
-In file included from ../HAL/ultrasonic_sensor.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../HAL/ultrasonic_sensor.c
- 
-Building file: ../Application/Car_Parking_Sensor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Application/Car_Parking_Sensor.d" -MT"Application/Car_Parking_Sensor.o" -c -o "Application/Car_Parking_Sensor.o" "../Application/Car_Parking_Sensor.c"
-In file included from ../Application/Car_Parking_Sensor.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../Application/Car_Parking_Sensor.c
- 
-Building target: Car_Parking_Sensors.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Car_Parking_Sensors.map -mmcu=atmega32 -o "Car_Parking_Sensors.elf"  ./MCAL/adc.o ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/icu.o ./MCAL/timer.o  ./HAL/buzzer.o ./HAL/ir_sensor.o ./HAL/lcd.o ./HAL/three_leds.o ./HAL/ultrasonic_sensor.o  ./Application/Car_Parking_Sensor.o   
-Finished building target: Car_Parking_Sensors.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Car_Parking_Sensors.elf  >"Car_Parking_Sensors.lss"
-Finished building: Car_Parking_Sensors.lss
- 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Car_Parking_Sensors.elf
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   17166 bytes (52.4% Full)
+Program:    7870 bytes (24.0% Full)
 (.text + .data + .bootloader)
 
-Data:        321 bytes (15.7% Full)
+Data:         17 bytes (0.8% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
-21:25:50 **** Build of configuration Debug for project Control_Car_Using_Bluetooth ****
-make all 
-Building file: ../MCAL/UART/uart.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/uart.d" -MT"MCAL/UART/uart.o" -c -o "MCAL/UART/uart.o" "../MCAL/UART/uart.c"
-Finished building: ../MCAL/UART/uart.c
+22:28:34 **** Clean-only build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
+make clean 
+rm -rf  ./MCAL/adc.o ./MCAL/external_interrupts.o ./MCAL/gpio.o ./MCAL/icu.o ./MCAL/timer.o  ./HAL/buzzer.o ./HAL/ir_sensor.o ./HAL/lcd.o ./HAL/three_leds.o ./HAL/ultrasonic_sensor.o  ./Application/Car_Parking_Sensor.o  sizedummy  Car_Parking_Sensors.lss  ./MCAL/adc.d ./MCAL/external_interrupts.d ./MCAL/gpio.d ./MCAL/icu.d ./MCAL/timer.d  ./HAL/buzzer.d ./HAL/ir_sensor.d ./HAL/lcd.d ./HAL/three_leds.d ./HAL/ultrasonic_sensor.d  ./Application/Car_Parking_Sensor.d  Car_Parking_Sensors.elf
  
-Building file: ../MCAL/PWM/pwm.c
+22:28:34 **** Build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
+make all 
+Building file: ../MCAL/TIMER/timer.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/PWM/pwm.d" -MT"MCAL/PWM/pwm.o" -c -o "MCAL/PWM/pwm.o" "../MCAL/PWM/pwm.c"
-Finished building: ../MCAL/PWM/pwm.c
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/TIMER/timer.d" -MT"MCAL/TIMER/timer.o" -c -o "MCAL/TIMER/timer.o" "../MCAL/TIMER/timer.c"
+../MCAL/TIMER/timer.c: In function 'Timer_getTimerValue':
+../MCAL/TIMER/timer.c:297: warning: control reaches end of non-void function
+../MCAL/TIMER/timer.c: In function 'Timer_setCallBack':
+../MCAL/TIMER/timer.c:309: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:312: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:315: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/TIMER/timer.c
+ 
+Building file: ../MCAL/ICU/icu.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/ICU/icu.d" -MT"MCAL/ICU/icu.o" -c -o "MCAL/ICU/icu.o" "../MCAL/ICU/icu.c"
+../MCAL/ICU/icu.c: In function 'ICU_setCallBack':
+../MCAL/ICU/icu.c:81: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/ICU/icu.c
  
 Building file: ../MCAL/GPIO/gpio.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/GPIO/gpio.d" -MT"MCAL/GPIO/gpio.o" -c -o "MCAL/GPIO/gpio.o" "../MCAL/GPIO/gpio.c"
 Finished building: ../MCAL/GPIO/gpio.c
  
-Building file: ../HAL/MOTOR/motor.c
+Building file: ../MCAL/EXT_INT/external_interrupts.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/MOTOR/motor.d" -MT"HAL/MOTOR/motor.o" -c -o "HAL/MOTOR/motor.o" "../HAL/MOTOR/motor.c"
-In file included from ../HAL/MOTOR/motor.c:11:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../HAL/MOTOR/motor.c
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/EXT_INT/external_interrupts.d" -MT"MCAL/EXT_INT/external_interrupts.o" -c -o "MCAL/EXT_INT/external_interrupts.o" "../MCAL/EXT_INT/external_interrupts.c"
+../MCAL/EXT_INT/external_interrupts.c: In function 'external_interrupt_setCallBack':
+../MCAL/EXT_INT/external_interrupts.c:166: warning: function return types not compatible due to 'volatile'
+../MCAL/EXT_INT/external_interrupts.c:169: warning: function return types not compatible due to 'volatile'
+../MCAL/EXT_INT/external_interrupts.c:172: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/EXT_INT/external_interrupts.c
  
-Building file: ../APP/Control_Car_Using_Bluetooth.c
+Building file: ../MCAL/ADC/adc.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Control_Car_Using_Bluetooth.d" -MT"APP/Control_Car_Using_Bluetooth.o" -c -o "APP/Control_Car_Using_Bluetooth.o" "../APP/Control_Car_Using_Bluetooth.c"
-In file included from ../APP/Control_Car_Using_Bluetooth.h:16,
-                 from ../APP/Control_Car_Using_Bluetooth.c:7:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../APP/Control_Car_Using_Bluetooth.c
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/ADC/adc.d" -MT"MCAL/ADC/adc.o" -c -o "MCAL/ADC/adc.o" "../MCAL/ADC/adc.c"
+Finished building: ../MCAL/ADC/adc.c
  
-Building target: Control_Car_Using_Bluetooth.elf
+Building file: ../HAL/ULTRASONIC/ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/ULTRASONIC/ultrasonic.d" -MT"HAL/ULTRASONIC/ultrasonic.o" -c -o "HAL/ULTRASONIC/ultrasonic.o" "../HAL/ULTRASONIC/ultrasonic.c"
+In file included from ../HAL/ULTRASONIC/ultrasonic.h:16,
+                 from ../HAL/ULTRASONIC/ultrasonic.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/ULTRASONIC/ultrasonic.c
+ 
+Building file: ../HAL/LED/led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/LED/led.d" -MT"HAL/LED/led.o" -c -o "HAL/LED/led.o" "../HAL/LED/led.c"
+Finished building: ../HAL/LED/led.c
+ 
+Building file: ../HAL/LCD/lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/LCD/lcd.d" -MT"HAL/LCD/lcd.o" -c -o "HAL/LCD/lcd.o" "../HAL/LCD/lcd.c"
+In file included from ../HAL/LCD/lcd.h:14,
+                 from ../HAL/LCD/lcd.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/LCD/lcd.c: In function 'LCD_intgerToString':
+../HAL/LCD/lcd.c:203: warning: implicit declaration of function 'itoa'
+Finished building: ../HAL/LCD/lcd.c
+ 
+Building file: ../HAL/IR/ir.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/IR/ir.d" -MT"HAL/IR/ir.o" -c -o "HAL/IR/ir.o" "../HAL/IR/ir.c"
+Finished building: ../HAL/IR/ir.c
+ 
+Building file: ../HAL/BUZZER/buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/BUZZER/buzzer.d" -MT"HAL/BUZZER/buzzer.o" -c -o "HAL/BUZZER/buzzer.o" "../HAL/BUZZER/buzzer.c"
+Finished building: ../HAL/BUZZER/buzzer.c
+ 
+Building file: ../Application/Two_Ultrasonics_Plus_Two_IRs.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Application/Two_Ultrasonics_Plus_Two_IRs.d" -MT"Application/Two_Ultrasonics_Plus_Two_IRs.o" -c -o "Application/Two_Ultrasonics_Plus_Two_IRs.o" "../Application/Two_Ultrasonics_Plus_Two_IRs.c"
+In file included from ../Application/../HAL/ULTRASONIC/ultrasonic.h:16,
+                 from ../Application/Two_Ultrasonics_Plus_Two_IRs.h:13,
+                 from ../Application/Two_Ultrasonics_Plus_Two_IRs.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Application/Two_Ultrasonics_Plus_Two_IRs.c: In function 'main':
+../Application/Two_Ultrasonics_Plus_Two_IRs.c:22: warning: implicit declaration of function 'Read_IR_and_Display_on_LCD'
+../Application/Two_Ultrasonics_Plus_Two_IRs.c: At top level:
+../Application/Two_Ultrasonics_Plus_Two_IRs.c:137: warning: conflicting types for 'Read_IR_and_Display_on_LCD'
+../Application/Two_Ultrasonics_Plus_Two_IRs.c:22: warning: previous implicit declaration of 'Read_IR_and_Display_on_LCD' was here
+Finished building: ../Application/Two_Ultrasonics_Plus_Two_IRs.c
+ 
+Building target: Two_Ultrasonics_Plus_Two_IRs.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/UART/uart.o  ./MCAL/PWM/pwm.o  ./MCAL/GPIO/gpio.o  ./HAL/MOTOR/motor.o  ./APP/Control_Car_Using_Bluetooth.o   
-Finished building target: Control_Car_Using_Bluetooth.elf
+avr-gcc -Wl,-Map,Two_Ultrasonics_Plus_Two_IRs.map -mmcu=atmega32 -o "Two_Ultrasonics_Plus_Two_IRs.elf"  ./MCAL/TIMER/timer.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/external_interrupts.o  ./MCAL/ADC/adc.o  ./HAL/ULTRASONIC/ultrasonic.o  ./HAL/LED/led.o  ./HAL/LCD/lcd.o  ./HAL/IR/ir.o  ./HAL/BUZZER/buzzer.o  ./Application/Two_Ultrasonics_Plus_Two_IRs.o   
+Finished building target: Two_Ultrasonics_Plus_Two_IRs.elf
  
 Invoking: AVR Create Extended Listing
-avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
-Finished building: Control_Car_Using_Bluetooth.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
-Finished building: Control_Car_Using_Bluetooth.hex
+avr-objdump -h -S Two_Ultrasonics_Plus_Two_IRs.elf  >"Two_Ultrasonics_Plus_Two_IRs.lss"
+Finished building: Two_Ultrasonics_Plus_Two_IRs.lss
  
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:    7870 bytes (24.0% Full)
-(.text + .data + .bootloader)
-
-Data:         17 bytes (0.8% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-21:31:32 **** Incremental Build of configuration Debug for project Car_Parking_Sensors ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Car_Parking_Sensors.elf
+avr-size --format=avr --mcu=atmega32 Two_Ultrasonics_Plus_Two_IRs.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
@@ -179,29 +133,8 @@ Data:        321 bytes (15.7% Full)
 
 Finished building: sizedummy
  
-21:31:32 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+22:28:48 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
 make all 
-Building file: ../APP/Control_Car_Using_Bluetooth.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Control_Car_Using_Bluetooth.d" -MT"APP/Control_Car_Using_Bluetooth.o" -c -o "APP/Control_Car_Using_Bluetooth.o" "../APP/Control_Car_Using_Bluetooth.c"
-In file included from ../APP/Control_Car_Using_Bluetooth.h:16,
-                 from ../APP/Control_Car_Using_Bluetooth.c:7:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../APP/Control_Car_Using_Bluetooth.c
- 
-Building target: Control_Car_Using_Bluetooth.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Control_Car_Using_Bluetooth.map -mmcu=atmega32 -o "Control_Car_Using_Bluetooth.elf"  ./MCAL/UART/uart.o  ./MCAL/PWM/pwm.o  ./MCAL/GPIO/gpio.o  ./HAL/MOTOR/motor.o  ./APP/Control_Car_Using_Bluetooth.o   
-Finished building target: Control_Car_Using_Bluetooth.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Control_Car_Using_Bluetooth.elf  >"Control_Car_Using_Bluetooth.lss"
-Finished building: Control_Car_Using_Bluetooth.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Control_Car_Using_Bluetooth.elf  "Control_Car_Using_Bluetooth.hex"
-Finished building: Control_Car_Using_Bluetooth.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
 AVR Memory Usage
@@ -212,6 +145,70 @@ Program:    7870 bytes (24.0% Full)
 (.text + .data + .bootloader)
 
 Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:28:49 **** Incremental Build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
+make all 
+Building target: Two_Ultrasonics_Plus_Two_IRs.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Two_Ultrasonics_Plus_Two_IRs.map -mmcu=atmega32 -o "Two_Ultrasonics_Plus_Two_IRs.elf"  ./MCAL/TIMER/timer.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/external_interrupts.o  ./MCAL/ADC/adc.o  ./HAL/ULTRASONIC/ultrasonic.o  ./HAL/LED/led.o  ./HAL/LCD/lcd.o  ./HAL/IR/ir.o  ./HAL/BUZZER/buzzer.o  ./Application/Two_Ultrasonics_Plus_Two_IRs.o   
+Finished building target: Two_Ultrasonics_Plus_Two_IRs.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Two_Ultrasonics_Plus_Two_IRs.elf  >"Two_Ultrasonics_Plus_Two_IRs.lss"
+Finished building: Two_Ultrasonics_Plus_Two_IRs.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Two_Ultrasonics_Plus_Two_IRs.elf  "Two_Ultrasonics_Plus_Two_IRs.hex"
+Finished building: Two_Ultrasonics_Plus_Two_IRs.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Two_Ultrasonics_Plus_Two_IRs.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   17166 bytes (52.4% Full)
+(.text + .data + .bootloader)
+
+Data:        321 bytes (15.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:51 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_Car_Using_Bluetooth.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7870 bytes (24.0% Full)
+(.text + .data + .bootloader)
+
+Data:         17 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:30:51 **** Incremental Build of configuration Debug for project Two_Ultrasonics_Plus_Two_IRs ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Two_Ultrasonics_Plus_Two_IRs.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   17166 bytes (52.4% Full)
+(.text + .data + .bootloader)
+
+Data:        321 bytes (15.7% Full)
 (.data + .bss + .noinit)
 
 
