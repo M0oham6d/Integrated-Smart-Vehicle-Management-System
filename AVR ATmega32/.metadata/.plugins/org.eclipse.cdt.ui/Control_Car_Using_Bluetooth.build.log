@@ -1,27 +1,5 @@
-21:25:50 **** Build of configuration Debug for project Control_Car_Using_Bluetooth ****
+21:31:32 **** Incremental Build of configuration Debug for project Control_Car_Using_Bluetooth ****
 make all 
-Building file: ../MCAL/UART/uart.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/uart.d" -MT"MCAL/UART/uart.o" -c -o "MCAL/UART/uart.o" "../MCAL/UART/uart.c"
-Finished building: ../MCAL/UART/uart.c
- 
-Building file: ../MCAL/PWM/pwm.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/PWM/pwm.d" -MT"MCAL/PWM/pwm.o" -c -o "MCAL/PWM/pwm.o" "../MCAL/PWM/pwm.c"
-Finished building: ../MCAL/PWM/pwm.c
- 
-Building file: ../MCAL/GPIO/gpio.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/GPIO/gpio.d" -MT"MCAL/GPIO/gpio.o" -c -o "MCAL/GPIO/gpio.o" "../MCAL/GPIO/gpio.c"
-Finished building: ../MCAL/GPIO/gpio.c
- 
-Building file: ../HAL/MOTOR/motor.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"HAL/MOTOR/motor.d" -MT"HAL/MOTOR/motor.o" -c -o "HAL/MOTOR/motor.o" "../HAL/MOTOR/motor.c"
-In file included from ../HAL/MOTOR/motor.c:11:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../HAL/MOTOR/motor.c
- 
 Building file: ../APP/Control_Car_Using_Bluetooth.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Control_Car_Using_Bluetooth.d" -MT"APP/Control_Car_Using_Bluetooth.o" -c -o "APP/Control_Car_Using_Bluetooth.o" "../APP/Control_Car_Using_Bluetooth.c"
@@ -59,5 +37,5 @@ Data:         17 bytes (0.8% Full)
 Finished building: sizedummy
  
 
-21:25:51 Build Finished. 0 errors, 2 warnings. (took 1s.315ms)
+21:31:33 Build Finished. 0 errors, 1 warnings. (took 662ms)
 

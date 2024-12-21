@@ -4593,7 +4593,7 @@ uint8 motorSpeed(uint8 speed)
             break;
     }
 
-    return 100;  // Default speed
+    return MOTOR_MAX_SPEED;  // Default speed
     1d96:	84 e6       	ldi	r24, 0x64	; 100
     1d98:	8a 83       	std	Y+2, r24	; 0x02
     1d9a:	8a 81       	ldd	r24, Y+2	; 0x02

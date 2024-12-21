@@ -64,5 +64,5 @@ uint8 motorSpeed(uint8 speed)
             break;
     }
 
-    return MOTOR_MAX_SPEED;  // Default speed
+    return 100;  // Default speed
 }
