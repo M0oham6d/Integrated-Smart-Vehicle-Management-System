@@ -1,0 +1,38 @@
+/******************************************************************************
+ * Module		: PIR Sensor
+ * File Name	: pir.h
+ * Author		: A7la Team :)
+ * Created on	: 21/11/2024
+ * Description	: Header file for the PIR AVR driver
+ *******************************************************************************/
+#ifndef HAL_PIR_SENSOR_H_
+#define HAL_PIR_SENSOR_H_
+
+#include "../../MCAL/GPIO/gpio.h"
+#include "../../LIB/std_types.h"
+#include <avr/io.h>
+
+/* PIR sensor port and pin definitions */
+#define PIR_PORT      PORTD_ID
+#define PIR0_PIN      PIN2_ID
+#define PIR1_PIN      PIN3_ID
+
+/*
+ * Description:
+ * Function to read the value from a specific PIR sensor pin.
+ * pir_port: The port number where the PIR sensor is connected.
+ * pir_pin: The pin number where the PIR sensor is connected.
+ * Returns: The value read from the PIR sensor pin (0 or 1).
+ */
+uint8 PIR_ReadValue1();
+
+uint8 PIR_ReadValue2();
+
+/*
+ * Description:
+ * Function to initialize the PIR sensor.
+ * This function sets up the necessary pin directions for the PIR sensor.
+ */
+void PIR_init(void);
+
+#endif /* HAL_PIR_SENSOR_H_ */

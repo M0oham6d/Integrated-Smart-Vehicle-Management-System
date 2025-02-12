@@ -1,0 +1,41 @@
+/******************************************************************************
+ * File Name    : std_types.h
+ * Author       : A7la Team :)
+ * Created on   : 13/10/2024
+ * Description  : Header file for the std_types
+ *******************************************************************************/
+#ifndef STANDARD_TYPES_H_
+#define STANDARD_TYPES_H_
+
+typedef enum
+{
+    NO_CLOCK, F_CPU_CLOCK, F_CPU_8, F_CPU_64, F_CPU_256, F_CPU_1024  // Timer clock types
+} Timer_ClockType;
+
+/* Boolean Values  */
+#ifndef FALSE
+#define FALSE               (0u)
+#endif
+
+#ifndef TRUE
+#define TRUE                (1u)
+#endif
+
+#define LOGIC_HIGH          (1u)  // Logical high value
+#define LOGIC_LOW           (0u)  // Logical low value
+
+#define NULL_PTR            ((void*)0)  // Null pointer definition
+
+/* Standard Types */
+typedef unsigned char         uint8;          /*           0 .. 255              */
+typedef signed char           sint8;          /*        -128 .. +127             */
+typedef unsigned short        uint16;         /*           0 .. 65535            */
+typedef signed short          sint16;         /*      -32768 .. +32767           */
+typedef unsigned long         uint32;         /*           0 .. 4294967295       */
+typedef signed long           sint32;         /* -2147483648 .. +2147483647      */
+typedef unsigned long long    uint64;         /*       0 .. 18446744073709551615  */
+typedef signed long long      sint64;         /* -9223372036854775808 .. 9223372036854775807 */
+typedef float                 float32;        /* Single precision floating point */
+typedef double                float64;        /* Double precision floating point */
+
+#endif /* STANDARD_TYPES_H_ */
