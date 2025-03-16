@@ -1,182 +1,89 @@
 /******************************************************************************
- * Module       : UART
- * File Name    : uart.c
- * Author       : A7la Team :)
- * Created on   : 26/10/2024
- * Description  : Source file for the UART AVR driver
+ * Module		: UART
+ * File Name	: UART.c
+ * Author		: A7la Team :)
+ * Created on	: 21/11/2024
+ * Description	: Source file for the TIMER AVR Driver
  *******************************************************************************/
-#include "uart.h"  /* Include UART header file */
-#include <avr/io.h>  /* Include AVR I/O header file */
-#include "../../LIB/common_macros.h"  /* Include common macros header file */
+#include "../UART/UART.h"
 
-/*******************************************************************************
- *                      Functions Definitions                                  *
- *******************************************************************************/
+/* Callbacks */
+static void (*RxCallback)(uint8) = 0;
+static void (*TxCallback)(void) = 0;
 
-/*
- * Description :
- * Function responsible for initializing the UART device by:
- * 1. Setting up the frame format like number of data bits, parity bit type, and number of stop bits.
- * 2. Enabling the UART.
- * 3. Setting up the UART baud rate.
- * Parameters  :
- * - Config_Ptr: Pointer to the UART configuration structure.
- */
-void UART_init(const UART_ConfigType * Config_Ptr)
+void UART_Init(UART_ConfigType *config)
 {
-    uint16 ubrr_value = 0;
+    /* Set baud rate */
+    uint16 ubrr = (F_CPU / (16 * config->baudRate)) - 1;
+    UBRRH = (uint8)(ubrr >> 8);
+    UBRRL = (uint8)ubrr;
 
-    /* U2X = 1 for double transmission speed */
-    UCSRA = (1<<U2X);
+    /* Set frame format */
+    uint8 ucsrb = (1 << RXEN) | (1 << TXEN);  /* Enable RX and TX */
+    uint8 ucsrc = (1 << URSEL);	/* URSEL must be 1 when writing to UCSRC */
 
-    /************************** UCSRB Description **************************
-     * RXCIE = 0 Disable USART RX Complete Interrupt Enable
-     * TXCIE = 0 Disable USART TX Complete Interrupt Enable
-     * UDRIE = 0 Disable USART Data Register Empty Interrupt Enable
-     * RXEN  = 1 Receiver Enable
-     * TXEN  = 1 Transmitter Enable
-     * UCSZ2 = 0 For 5-bit, 6-bit, 7-bit, 8-bit data mode
-     * RXB8 & TXB8 not used for 8-bit data mode
-     ***********************************************************************/
-    UCSRB = (1<<RXEN) | (1<<TXEN);
+    /* Data bits */
+    switch (config->dataBits)
+    {
+        case 5: ucsrc |= (0 << UCSZ0) | (0 << UCSZ1); break;
+        case 6: ucsrc |= (1 << UCSZ0) | (0 << UCSZ1); break;
+        case 7: ucsrc |= (0 << UCSZ0) | (1 << UCSZ1); break;
+        case 8: ucsrc |= (1 << UCSZ0) | (1 << UCSZ1); break;
+        case 9: ucsrc |= (1 << UCSZ0) | (1 << UCSZ1); ucsrb |= (1 << UCSZ2); break;
+    }
 
-    /************************** UCSRC Description **************************
-     * URSEL   = 1 The URSEL must be one when writing the UCSRC
-     * UMSEL   = 0 Asynchronous Operation
-     * UPM1:0  = 00 Disable parity bit, 10  Even Parity, 11  Odd Parity
-     * USBS    = 0 One stop bit, 1 Two stop bits
-     * UCSZ1:0 = 11 For 8-bit data mode
-     * UCPOL   = 0 Used with the Synchronous operation only
-     ***********************************************************************/
-    UCSRC = (1<<URSEL) | ((Config_Ptr->bit_data)<<UCSZ0) |
-            ((Config_Ptr->Parity_Configurations)<<UPM0) |
-            ((Config_Ptr->StopBit_Configurations)<<USBS);
+    if (config->parity == 1) ucsrc |= (1 << UPM1);	/* Even parity */
+    else if (config->parity == 2) ucsrc |= (1 << UPM1) | (1 << UPM0);	/* Odd parity */
 
-    /* Calculate the UBRR register value */
-    ubrr_value = (uint16)(((F_CPU / (Config_Ptr->baudRate * 8UL))) - 1);
+    if (config->stopBits == 2) ucsrc |= (1 << USBS);	/* Stop bits */
 
-    /* First 8 bits from the BAUD_PRESCALE inside UBRRL and last 4 bits in UBRRH */
-    UBRRH = ubrr_value >> 8;
-    UBRRL = ubrr_value;
+    // Apply configurations
+    UCSRB = ucsrb;
+    UCSRC = ucsrc;
+
+    sei();		/* Enable Global Interrupts */
 }
 
-/*
- * Description :
- * Function responsible for sending a byte to another UART device.
- * Parameters  :
- * - data: The byte to be sent.
- */
-void UART_sendByte(const uint8 data)
+/* Transmit data */
+void UART_Transmit (uint8 data)
 {
-    /*
-     * UDRE flag is set when the TX buffer (UDR) is empty and ready for
-     * transmitting a new byte so wait until this flag is set to one
-     */
-    while(BIT_IS_CLEAR(UCSRA, UDRE)){}
-
-    /*
-     * Put the required data in the UDR register and it also clears the UDRE flag as
-     * the UDR register is not empty now
-     */
+    while (!(UCSRA & (1 << UDRE)));  // Wait for empty transmit buffer
     UDR = data;
 }
 
-/*
- * Description :
- * Function responsible for receiving a byte from another UART device.
- * Returns     :
- * - The received byte.
- */
-uint8 UART_receiveByte(void)
+/* Receive data */
+uint8 UART_Receive (void)
 {
-    /* RXC flag is set when the UART receives data so wait until this flag is set to one */
-    while(BIT_IS_CLEAR(UCSRA, RXC)){}
-
-    /*
-     * Read the received data from the RX buffer (UDR)
-     * The RXC flag will be cleared after reading the data
-     */
+    while (!(UCSRA & (1 << RXC)));  // Wait for data to be received
     return UDR;
 }
 
-/*
- * Description :
- * Send the required string through UART to the other UART device.
- * Parameters  :
- * - Str: Pointer to the string to be sent.
- */
-void UART_sendString(const uint8 *Str)
+/* Set RX callback */
+void UART_SetRxCallback(void (*callback)(uint8))
 {
-    uint8 i = 0;
+    RxCallback = callback;
+    UCSRB |= (1 << RXCIE);		/* Enable RX interrupt */
+}
 
-    /* Send the whole string */
-    while(Str[i] != '\0')
+/* Set TX callback */
+void UART_SetTxCallback(void (*callback)(void))
+{
+    TxCallback = callback;
+    UCSRB |= (1 << TXCIE);		/* Enable TX interrupt */
+}
+
+ISR (USART_RXC_vect)		/* ISR for RX complete */
+{
+    if (RxCallback)
     {
-        UART_sendByte(Str[i]);
-        i++;
+        RxCallback(UDR);
     }
 }
 
-/*
- * Description :
- * Receive the required string until the '#' symbol through UART from the other UART device.
- * Parameters  :
- * - Str: Pointer to the buffer where the received string will be stored.
- */
-void UART_receiveString(uint8 *Str)
+ISR (USART_TXC_vect)		/* ISR for TX complete */
 {
-    uint8 i = 0;
-
-    /* Receive the first byte */
-    Str[i] = UART_receiveByte();
-
-    /* Receive the whole string until the '#' */
-    while(Str[i] != '#')
+    if (TxCallback)
     {
-        i++;
-        Str[i] = UART_receiveByte();
-    }
-
-    /* After receiving the whole string plus the '#', replace the '#' with '\0' */
-    Str[i] = '\0';
-}
-
-/*
- * Description :
- * Send the required array through UART to the other UART device.
- * Parameters  :
- * - a_ptr: Pointer to the array to be sent.
- * - size: Size of the array.
- */
-void UART_sendArray(const uint8 *a_ptr, uint8 size)
-{
-    uint8 i;
-
-    /* Send the whole array */
-    for(i = 0; i < size; i++)
-    {
-        UART_sendByte(a_ptr[i]);
-    }
-    UART_sendByte('#');  /* Send '#' to mark the end of the array */
-}
-
-/*
- * Description :
- * Receive the required array until the '#' symbol through UART from the other UART device.
- * Parameters  :
- * - a_ptr: Pointer to the buffer where the received array will be stored.
- */
-void UART_receiveArray(uint8 *a_ptr)
-{
-    uint8 i = 0;
-
-    /* Receive the first byte */
-    a_ptr[i] = UART_receiveByte();
-
-    /* Receive the whole array until the '#' */
-    while(a_ptr[i] != '#')
-    {
-        i++;
-        a_ptr[i] = UART_receiveByte();
+        TxCallback();
     }
 }

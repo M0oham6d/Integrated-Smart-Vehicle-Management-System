@@ -1,0 +1,32 @@
+/*
+ * T_UART.h
+ *
+ *  Created on: Mar 16, 2025
+ *      Author: Muhammed Ayman
+ */
+
+#ifndef MCAL_UART_UART_H_
+#define MCAL_UART_UART_H_
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+// Configuration structure
+typedef struct {
+    uint32_t baudRate;
+    uint8_t dataBits;  // 5, 6, 7, 8, or 9
+    uint8_t parity;    // 0 = None, 1 = Even, 2 = Odd
+    uint8_t stopBits;  // 1 or 2
+} UART_ConfigType;
+
+// Function prototypes
+void UART_Init(UART_ConfigType *config);
+void UART_Transmit(uint8_t data);
+uint8_t UART_Receive(void);
+
+// Optional: Callbacks for RX and TX interrupts
+void UART_SetRxCallback(void (*callback)(uint8_t));
+void UART_SetTxCallback(void (*callback)(void));
+
+
+#endif /* MCAL_UART_UART_H_ */

@@ -5,314 +5,191 @@
  * Created on   : 22/11/2024
  * Description  : Source file for the Application layer
  *******************************************************************************/
+#include "Application.h"
 
-#include "Application.h"  /* Include Application header file */
+/*********************** Global Variables ***********************/
+volatile uint16 distanceRight    = 0;
+volatile uint16 distanceForward  = 0;
+volatile uint16 distanceBackward = 0;
+uint8 selection = 0 ;
 
-/*******************************************************************************
- *                           Global Variables                                  *
- *******************************************************************************/
-
-volatile uint8 pir_recieve1 = 0;  /* Variable to store PIR sensor 1 status */
-volatile uint8 pir_recieve2 = 0;  /* Variable to store PIR sensor 2 status */
-volatile uint16 distance = 0;     /* Variable to store distance measurement */
-
-/*******************************************************************************
- *                      Interrupt Service Routines                             *
- *******************************************************************************/
-
-/*
- * Description :
- * Interrupt Service Routine for external interrupt 0.
- * This ISR stops the car when triggered.
- */
-void ISR0(void)
-{
-    Stop();  /* Stop the car */
+/****************** Interrupt Service Routines ******************/
+void ISR2(void) {
+	Stop();
 }
 
-/*
- * Description :
- * Interrupt Service Routine for external interrupt 1.
- * This ISR stops the car when triggered.
- */
-void ISR1(void)
-{
-    Stop();  /* Stop the car */
+void ISR1(void) {
+	Stop();
 }
-
-/*******************************************************************************
- *                              Main Function                                  *
- *******************************************************************************/
 
 int main(void)
 {
-    SREG |= (1 << 7);  /* Enable global interrupts */
+	SREG |= (1 << 7);		/* Enable global interrupts */
 
-    uint8 recievedMSG = 0;  /* Variable to store received message from UART */
+	UART_Init(&config);
+	UART_SetRxCallback(App_Receive);
 
-    /* Initialize UART with the specified configuration */
-    UART_init(&uart_configratoin);
+	LCD_init();
+	LEDS_init();
+	Buzzer_init();
+	DcMotor_Init(100);
 
-    /* Initialize DC motor with maximum speed */
-    DcMotor_Init(100);
+	Ultrasonic_init();
 
-    /* Initialize PIR sensors */
-    PIR_init();
-
-    /* Initialize LCD */
-    LCD_init();
-    LCD_clearScreen();
-
-    /* Initialize LEDs */
-    LEDS_init();
-
-    /* Initialize ultrasonic sensor */
-    Ultrasonic_init();
-
-    /* Configure external interrupt 0 */
-    EXT_INT_ConfigType EX_interrupt_0 = {INT_0, RISING_EDGE};
-    external_interrupt_setCallBack(ISR0, INT_0);
-    external_interrupt_init(&EX_interrupt_0);
-
-    /* Configure external interrupt 1 */
-    EXT_INT_ConfigType EX_interrupt_1 = {INT_1, RISING_EDGE};
-    external_interrupt_setCallBack(ISR1, INT_1);
-    external_interrupt_init(&EX_interrupt_1);
-
-    while (1)
-    {
-        /* Read PIR sensor values */
-        pir_recieve1 = PIR_ReadValue1();
-        pir_recieve2 = PIR_ReadValue2();
-
-        /* Handle PIR sensor 1 and 2 detection */
-        if (pir_recieve1 && pir_recieve2)
-        {
-            LED_on(red);
-            LED_on(green);
-            LCD_clearScreen();
-            LCD_displayStringRowColumn(0, 0, "Motion Detected");
-            LCD_displayStringRowColumn(1, 0, "In Front & Back");
-            _delay_ms(500);
-            _delay_ms(500);
-        }
-        else
-        {
-            LED_off(red);
-            LED_off(green);
-            LCD_clearScreen();
-        }
-
-        /* Handle PIR sensor 1 detection */
-        if (pir_recieve1 && !pir_recieve2)
-        {
-            LED_on(red);
-            LCD_clearScreen();
-            LCD_displayStringRowColumn(0, 0, "Motion Detected");
-            LCD_displayStringRowColumn(1, 0, "In Back");
-            _delay_ms(500);
-            _delay_ms(500);
-        }
-        else
-        {
-            LED_off(red);
-            LCD_clearScreen();
-        }
-
-        /* Handle PIR sensor 2 detection */
-        if (!pir_recieve1 && pir_recieve2)
-        {
-            LED_on(green);
-            LCD_clearScreen();
-            LCD_displayStringRowColumn(0, 0, "Motion Detected");
-            LCD_displayStringRowColumn(1, 0, "In Front");
-            _delay_ms(500);
-            _delay_ms(500);
-        }
-        else
-        {
-            LED_off(green);
-            LCD_clearScreen();
-        }
-
-        /* Receive a message from UART */
-        recievedMSG = UART_receiveByte();
-
-        /* Process the received message */
-        switch (recievedMSG)
-        {
-        case 'F':
-            if (!pir_recieve1)
-            {
-                Forward();  /* Move forward */
-            }
-            break;
-        case 'B':
-            if (!pir_recieve2)
-            {
-                Backward();  /* Move backward */
-            }
-            break;
-        case 'S':
-            Stop();  /* Stop movement */
-            break;
-        case 'R':
-            if (!pir_recieve1)
-            {
-                Right_Forward();  /* Turn right and move forward */
-            }
-            break;
-        case 'L':
-            if (!pir_recieve1)
-            {
-                Left_Forward();  /* Turn left and move forward */
-            }
-            break;
-        case 'A':
-            if (!pir_recieve2)
-            {
-                Right_Backward();  /* Turn right and move backward */
-            }
-            break;
-        case 'H':
-            if (!pir_recieve2)
-            {
-                Left_Backward();  /* Turn left and move backward */
-            }
-            break;
-        case 'P':
-            autoParking();  /* Perform auto-parking */
-            break;
-        case 'M':
-            DcMotor_Init(motorSpeed(UART_receiveByte()));  /* Reinitialize motor with new speed */
-            break;
-        }
-    }
-
-    return 0;
+	while (1)
+	{
+		readDistance();		/* Read distances from Three Ultrasonics */
+		collisionAvoidance();	/* Handle collision avoidance mode  */
+	}
 }
 
-/*******************************************************************************
- *                      Functions Definitions                                  *
- *******************************************************************************/
+/********************* Functions Definitions *********************/
+void App_Receive(uint8 recievedMSG)
+{
+	selection = recievedMSG ;
+	switch (recievedMSG)
+	{
+	case 'F':
+		Forward();  //Move forward
+		break;
+	case 'B':
+		Backward();  //Move backward
+		break;
+	case 'S':
+		Stop();  //Stop movement
+		break;
+	case 'R':
+		Right_Forward();  //Turn right and move forward
+		break;
+	case 'L':
+		Left_Forward();  //Turn left and move forward
+		break;
+	case 'A':
+		Right_Backward();  //Turn right and move backward
+		break;
+	case 'H':
+		Left_Backward(); /*Turn left and move backward*/
+		break;
+	case 'P':
+		// autoParking();	// Perform auto-parking
+		break;
+	case 'M':
+		// DcMotor_Init(motorSpeed(UART_receiveByte()));   //Reinitialize motor with new speed
+		break;
+	}
+}
 
-/*
- * Description :
- * Function to determine motor speed based on the received speed value.
- * Parameters  :
- * - speed: The speed value received from UART.
- * Returns     :
- * - The motor speed level (MOTOR_SPEED_ONE, MOTOR_SPEED_TWO, or MOTOR_MAX_SPEED).
- */
 uint8 motorSpeed(uint8 speed)
 {
-    switch (speed)
-    {
-    case '1':
-        return MOTOR_SPEED_ONE;  /* Speed level 1 */
-        break;
-    case '2':
-        return MOTOR_SPEED_TWO;  /* Speed level 2 */
-        break;
-    case '3':
-        return MOTOR_MAX_SPEED;  /* Speed level 3 */
-        break;
-    }
+	switch (speed)
+	{
+	case '1':
+		return MOTOR_SPEED_ONE;  // Speed level 1
+		break;
+	case '2':
+		return MOTOR_SPEED_TWO;  // Speed level 2
+		break;
+	case '3':
+		return MOTOR_MAX_SPEED;  // Speed level 3
+		break;
+	}
 
-    return MOTOR_MAX_SPEED;  /* Default speed */
+	return MOTOR_MAX_SPEED;  // Default speed
 }
 
-/*
- * Description :
- * Function to handle the auto-parking functionality.
- * This function controls the car's movement to park automatically.
- */
-void autoParking(void)
-{
-    uint8 counter = 0;
-
-    LCD_clearScreen();
-
-    _delay_ms(500);
-    _delay_ms(500);
-
-    readDistance();
-
-    Forward();
-
-    while (distance > 40)
-    {
-        readDistance();
-
-        _delay_ms(100);
-
-        counter++;
-        if (counter > 5)
-        {
-            LCD_displayStringRowColumn(1, 0, "SPACE Available");
-
-            Stop();
-
-            _delay_ms(500);
-            _delay_ms(500);
-
-            Left_Forward_Parking();
-
-            _delay_ms(500);
-
-            Stop();
-
-            _delay_ms(500);
-
-            Backward();
-
-            _delay_ms(500);
-            _delay_ms(500);
-
-            Stop();
-
-            _delay_ms(500);
-
-            Left_Backward();
-
-            _delay_ms(700);
-            _delay_ms(700);
-
-            break;
-        }
-    }
-
-    if (counter < 5)
-    {
-        LCD_displayStringRowColumn(1, 0, "NO SPACE");
-    }
-
-    Stop();
-}
-
-/*
- * Description :
- * Function to read the distance from the ultrasonic sensor and display it on the LCD.
- */
 void readDistance(void)
 {
-    distance = Ultrasonic_readDistance();
-    LCD_displayStringRowColumn(0, 0, "D1 = ");
-    LCD_intgerToString(distance);
-    LCD_displayStringRowColumn(0, 8, "cm");
+	distanceRight = Ultrasonic_readDistance(U_right);
 
-    if (distance < 10)
-    {
-        LCD_displayStringRowColumn(0, 6, " ");
-    }
+	LCD_displayStringRowColumn(0, 0, "R:");
+	LCD_moveCursor(0, 2);
+	LCD_intgerToString(distanceRight);
 
-    if (distance < 100)
-    {
-        LCD_displayStringRowColumn(0, 7, " ");
-    }
+	if (distanceRight < 100)
+	{
+		LCD_displayStringRowColumn(0, 5, " ");
+	}
+	if (distanceRight > 100)
+	{
+		LCD_displayStringRowColumn(0, 2, "99 ");
+	}
+	if (distanceRight < 10)
+	{
+		LCD_displayStringRowColumn(0, 3, " ");
+	}
 
-    if (distance >= 100)
-    {
-        LCD_displayStringRowColumn(0, 5, "99 ");
-    }
+	_delay_ms(100);
+
+	distanceForward = Ultrasonic_readDistance(U_forward);
+
+	LCD_displayStringRowColumn(1, 0, "F:");
+	LCD_moveCursor(1, 2);
+	LCD_intgerToString(distanceForward);
+
+	if (distanceForward < 100)
+	{
+		LCD_displayStringRowColumn(1, 5, " ");
+	}
+	if (distanceForward > 100)
+	{
+		LCD_displayStringRowColumn(1, 2, "99 ");
+	}
+	if (distanceForward < 10)
+	{
+		LCD_displayStringRowColumn(1, 3, " ");
+	}
+
+	_delay_ms(100);
+
+	distanceBackward = Ultrasonic_readDistance(U_backward);
+
+	LCD_displayStringRowColumn(1, 6, "B:");
+	LCD_moveCursor(1, 9);
+	LCD_intgerToString(distanceBackward);
+
+	if (distanceBackward < 100)
+	{
+		LCD_displayStringRowColumn(1, 12, " ");
+	}
+	if (distanceBackward > 100)
+	{
+		LCD_displayStringRowColumn(1, 9, "99 ");
+	}
+	if (distanceBackward < 10)
+	{
+		LCD_displayStringRowColumn(1, 10, " ");
+	}
+
+	_delay_ms(100);
+}
+
+void collisionAvoidance(void)
+{
+	if(distanceForward <= 20 && (selection == 'F' || selection == 'R' || selection == 'L'))
+	{
+		Buzzer_on();
+		if (distanceForward <= 8)
+		{
+			Stop();
+			Buzzer_off();
+		}
+	}
+	else if(distanceForward >= 20)
+	{
+		Buzzer_off();
+	}
+
+	if(distanceBackward <= 20 && (selection == 'B' || selection == 'A' || selection == 'H'))
+	{
+		Buzzer_on();
+		if (distanceBackward <= 8)
+		{
+			Stop();
+			Buzzer_off();
+		}
+	}
+	else if(distanceBackward >= 20)
+	{
+		Buzzer_off();
+	}
 }

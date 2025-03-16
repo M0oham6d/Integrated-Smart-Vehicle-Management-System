@@ -27,7 +27,7 @@
 
 #define MOTOR_PORT_CONNECTION       PORTC_ID /* Motor port connection */
 #define PIN_INT1                    PIN4_ID  /* Motor pin INT1 */
-#define PIN_INT2                    PIN5_ID  /* Motor pin INT2 */
+#define PIN_INT2                    PIN3_ID  /* Motor pin INT2 */
 #define PIN_INT3                    PIN6_ID  /* Motor pin INT3 */
 #define PIN_INT4                    PIN7_ID  /* Motor pin INT4 */
 

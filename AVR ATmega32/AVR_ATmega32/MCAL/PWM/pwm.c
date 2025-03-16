@@ -18,7 +18,7 @@
  * Parameters  :
  * - Config_Ptr: Pointer to the Timer configuration structure.
  */
-void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr)
+void PWM_Timer0_Start(const Timer_Configuration * Config_Ptr)
 {
     TCNT0 = 0;  /* Set Timer Initial value to 0. */
 
@@ -49,7 +49,7 @@ void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr)
  * Parameters  :
  * - Config_Ptr: Pointer to the Timer configuration structure.
  */
-void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr)
+void PWM_Timer2_Start(const Timer_Configuration * Config_Ptr)
 {
     TCNT2 = 0;  /* Set Timer Initial value to 0. */
 

@@ -5,62 +5,57 @@
  * Created on   : 22/11/2024
  * Description  : Header file for the Application layer
  *******************************************************************************/
-
 #ifndef APP_APPLICATION_H_
 #define APP_APPLICATION_H_
 
-/*******************************************************************************
- *                                Includes                                     *
- *******************************************************************************/
+/*********************** MCAL Layer includes ***********************/
+#include "../MCAL/EXT_INT/EXT_INT.h"	/* Include external interrupt driver */
+#include "../MCAL/UART/UART.h"
 
-#include "../HAL/PIR/pir.h"  /* Include PIR sensor driver */
-#include "../HAL/MOTOR/motor.h"  /* Include motor control driver */
-#include "../MCAL/UART/uart.h"  /* Include UART communication driver */
-#include "../LIB/std_types.h"  /* Include standard types */
-#include "../HAL/LCD/lcd.h"  /* Include LCD driver */
-#include "../HAL/3 Leds/leds.h"  /* Include LEDs driver */
-#include "../HAL/Ultrasonic/ultrasonic_sensor.h"  /* Include ultrasonic sensor driver */
-#include <util/delay.h>  /* Include delay utility */
-#include "../MCAL/EXT_INT/EXT_INT.h"  /* Include external interrupt driver */
+/*********************** HAL Layer includes  ***********************/
+#include "../HAL/Ultrasonic/ultrasonic_sensor.h"	/* ultrasonic sensor driver */
+#include "../HAL/BUZZER/buzzer.h"					/* Buzzer sensor driver */
+#include "../HAL/3 Leds/leds.h"						/* LEDs driver */
+#include "../HAL/MOTOR/motor.h"						/* motor control driver */
+#include "../HAL/LCD/lcd.h"							/* LCD driver */
+#include "../HAL/PIR/pir.h"							/* PIR sensor driver */
 
-/*******************************************************************************
- *                               Types Declaration                             *
- *******************************************************************************/
+/*********************** LIB Layer includes  ***********************/
+#include "../LIB/std_types.h"						/* Standard types */
+#include <util/delay.h>								/* delay utility */
 
+/*********************** Configuration  ***********************/
 /* UART configuration structure */
-UART_ConfigType uart_configratoin = {
-    9600,  /* Baud rate */
-    UART_Parity_NONE,  /* No parity */
-    UART_STOP_1_BIT,  /* 1 stop bit */
-    MODE_EIGHT_BIT  /* 8-bit data mode */
-};
+UART_ConfigType config = {
+	.baudRate = 9600,
+	.dataBits = 8	,
+	.parity   = 0	,
+	.stopBits = 1 	};
 
-/*******************************************************************************
- *                              Functions Prototypes                           *
- *******************************************************************************/
+/*********************** Functions Prototypes ***********************/
 
 /*
- * Description :
- * Function to set the motor speed based on the input value.
- * Parameters  :
- * - speed: The desired speed of the motor (0 to 100).
- * Returns     :
- * - The actual speed set for the motor.
+ * Description : Function to set the motor speed based on the input value.
+ * Returns     : The actual speed set for the motor.
  */
 uint8 motorSpeed(uint8 speed);
 
 /*
  * Description :
- * Function to handle the auto-parking functionality.
- * This function controls the car's movement to park automatically.
+ * 	- Function to handle the auto-parking functionality.
+ * 	- This function controls the car's movement to park automatically.
  */
 void autoParking(void);
 
 /*
  * Description :
- * Function to read the distance from the ultrasonic sensor.
- * This function retrieves and processes the distance measurement.
+ * 	- Function to read the distance from the ultrasonic sensor.
+ * 	- This function retrieves and processes the distance measurement.
  */
 void readDistance(void);
+
+void App_Receive(uint8 recievedMSG);
+
+void collisionAvoidance(void);
 
 #endif /* APP_APPLICATION_H_ */

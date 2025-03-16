@@ -27,7 +27,7 @@ typedef struct
     PWM_Mode mode;            /* PWM mode (Non-inverting or Inverting) */
     Timer_ClockType timer_clock;  /* Timer clock type (e.g., no prescaler, prescaler 8, etc.) */
     uint8 duty_cycle;         /* Duty cycle percentage (0% to 100%) */
-} Timer_ConfigType;
+} Timer_Configuration;
 
 /*******************************************************************************
  *                        Functions Prototypes                                 *
@@ -39,7 +39,7 @@ typedef struct
  * Parameters  :
  * - Config_Ptr: Pointer to the Timer configuration structure.
  */
-void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr);
+void PWM_Timer0_Start(const Timer_Configuration * Config_Ptr);
 
 /*
  * Description :
@@ -47,6 +47,6 @@ void PWM_Timer0_Start(const Timer_ConfigType * Config_Ptr);
  * Parameters  :
  * - Config_Ptr: Pointer to the Timer configuration structure.
  */
-void PWM_Timer2_Start(const Timer_ConfigType * Config_Ptr);
+void PWM_Timer2_Start(const Timer_Configuration * Config_Ptr);
 
 #endif /* MCAL_PWM_H_ */

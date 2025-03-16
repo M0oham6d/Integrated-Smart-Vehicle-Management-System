@@ -75,7 +75,7 @@ void DcMotor_Init(uint8 MAXSPEED)
 void DcMotor1_Rotate(DcMotor_State state, uint8 speed)
 {
     /* Configure PWM for motor 1 */
-    Timer_ConfigType configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
+	Timer_Configuration configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
     PWM_Timer0_Start(&configrations);
 
     /* Control motor 1 direction */
@@ -108,7 +108,7 @@ void DcMotor1_Rotate(DcMotor_State state, uint8 speed)
 void DcMotor2_Rotate(DcMotor_State state, uint8 speed)
 {
     /* Configure PWM for motor 2 */
-    Timer_ConfigType configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
+	Timer_Configuration configrations = {NON_INVERTING, F_CPU_CLOCK, speed};
     PWM_Timer2_Start(&configrations);
 
     /* Control motor 2 direction */

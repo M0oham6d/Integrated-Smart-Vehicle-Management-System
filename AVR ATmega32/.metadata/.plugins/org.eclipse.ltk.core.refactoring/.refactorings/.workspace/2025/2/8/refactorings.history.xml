@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;AVR_ATmega32/MCAL/PWM2/PWM2.h&apos;" deleteContents="false" description="Delete resource &apos;AVR_ATmega32/MCAL/PWM2/PWM2.h&apos;" element1="/AVR_ATmega32/MCAL/PWM2/PWM2.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1740234602157"/>
+</session>

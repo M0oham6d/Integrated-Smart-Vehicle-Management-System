@@ -1,42 +1,20 @@
-16:09:01 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+01:08:57 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
 make all 
-Building file: ../APP/Application.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
-In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:12,
-                 from ../APP/Application.h:22,
-                 from ../APP/Application.c:9:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../APP/Application.c
- 
-Building target: AVR_ATmega32.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/uart.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
-Finished building target: AVR_ATmega32.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
-Finished building: AVR_ATmega32.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
-Finished building: AVR_ATmega32.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   23798 bytes (72.6% Full)
+Program:   22216 bytes (67.8% Full)
 (.text + .data + .bootloader)
 
-Data:        376 bytes (18.4% Full)
+Data:        332 bytes (16.2% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-16:09:03 Build Finished. 0 errors, 1 warnings. (took 1s.544ms)
+01:08:58 Build Finished. 0 errors, 0 warnings. (took 699ms)
 
