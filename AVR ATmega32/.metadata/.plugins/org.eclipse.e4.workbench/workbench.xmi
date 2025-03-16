@@ -86,7 +86,7 @@
                 <tags>categoryTag:General</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_TI0Kt-cBEe-Khp7DayEeww" containerData="8635" selectedElement="_TI0KuOcBEe-Khp7DayEeww">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_TI0Kt-cBEe-Khp7DayEeww" containerData="8635" selectedElement="_TI0Kv-cBEe-Khp7DayEeww">
               <children xsi:type="basic:PartSashContainer" xmi:id="_TI0KuOcBEe-Khp7DayEeww" containerData="7500" selectedElement="_TI0KuecBEe-Khp7DayEeww" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_TI0KuecBEe-Khp7DayEeww" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_TIbJIOcBEe-Khp7DayEeww"/>
                 <children xsi:type="basic:PartStack" xmi:id="_TI0KuucBEe-Khp7DayEeww" elementId="topRight" containerData="2500" selectedElement="_TI0Ku-cBEe-Khp7DayEeww">
@@ -192,7 +192,7 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_08JSIAJnEfCOLcI9ZwhnLg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Application.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Application.c&quot; partName=&quot;Application.c&quot; title=&quot;Application.c&quot; tooltip=&quot;AVR_ATmega32/APP/Application.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AVR_ATmega32/APP/Application.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3968&quot; selectionTopPixel=&quot;4688&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Application.c&quot; partName=&quot;Application.c&quot; title=&quot;Application.c&quot; tooltip=&quot;AVR_ATmega32/APP/Application.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AVR_ATmega32/APP/Application.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;583&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
@@ -200,7 +200,7 @@
           <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_wZ-AcAK0EfC4R8YSZodacw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Application.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Application.h&quot; partName=&quot;Application.h&quot; title=&quot;Application.h&quot; tooltip=&quot;AVR_ATmega32/APP/Application.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AVR_ATmega32/APP/Application.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1863&quot; selectionTopPixel=&quot;1080&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Application.h&quot; partName=&quot;Application.h&quot; title=&quot;Application.h&quot; tooltip=&quot;AVR_ATmega32/APP/Application.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AVR_ATmega32/APP/Application.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1863&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
@@ -335,7 +335,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAcR0OcBEe-Khp7DayEeww" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_muOPsAK7EfC0HZLR3qiNxA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_SUBQ_-cBEe-Khp7DayEeww"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__TJkwALAEfChVoSIPIM79A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_SUBQ_-cBEe-Khp7DayEeww"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAcR0ecBEe-Khp7DayEeww" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -343,8 +343,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAcR0-cBEe-Khp7DayEeww" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_muPd0AK7EfC0HZLR3qiNxA" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_ST9mbOcBEe-Khp7DayEeww"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_muQE4AK7EfC0HZLR3qiNxA" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_ST-0jOcBEe-Khp7DayEeww"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__TKy4ALAEfChVoSIPIM79A" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_ST9mbOcBEe-Khp7DayEeww"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__TKy4QLAEfChVoSIPIM79A" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_ST-0jOcBEe-Khp7DayEeww"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAcR1OcBEe-Khp7DayEeww" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -371,7 +371,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAc44OcBEe-Khp7DayEeww" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_muRTAAK7EfC0HZLR3qiNxA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_SUAp4-cBEe-Khp7DayEeww"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__TMBAALAEfChVoSIPIM79A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_SUAp4-cBEe-Khp7DayEeww"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_TAc44ecBEe-Khp7DayEeww" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -751,7 +751,7 @@
     <bindings xmi:id="_SVAIKecBEe-Khp7DayEeww" keySequence="CTRL+SHIFT+R P" command="_SUACmecBEe-Khp7DayEeww"/>
   </bindingTables>
   <bindingTables xmi:id="_SUzT4ucBEe-Khp7DayEeww" elementId="org.eclipse.mylyn.wikitext.tasks.ui.markupSourceContext" bindingContext="_SUJzu-cBEe-Khp7DayEeww">
-    <bindings xmi:id="_c99PgQK7EfCLNuuMDEnliQ" keySequence="CTRL+SHIFT+O" command="_ST6jGOcBEe-Khp7DayEeww"/>
+    <bindings xmi:id="_5MdTUALAEfCEKt5iA2ljZQ" keySequence="CTRL+SHIFT+O" command="_ST6jGOcBEe-Khp7DayEeww"/>
   </bindingTables>
   <bindingTables xmi:id="_SU1JBecBEe-Khp7DayEeww" elementId="org.eclipse.debug.ui.memoryview" bindingContext="_SUJzlucBEe-Khp7DayEeww">
     <bindings xmi:id="_SU1JBucBEe-Khp7DayEeww" keySequence="ALT+CTRL+M" command="_ST-NoecBEe-Khp7DayEeww"/>
@@ -2878,7 +2878,7 @@
   <addons xmi:id="_SSgN1-cBEe-Khp7DayEeww" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_SSgN2OcBEe-Khp7DayEeww" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_SS8SoOcBEe-Khp7DayEeww" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_mQP6QQK7EfC0HZLR3qiNxA" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_-zTnEQLAEfChVoSIPIM79A" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_STynMOcBEe-Khp7DayEeww" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_STynMecBEe-Khp7DayEeww" elementId="org.eclipse.mylyn.wikitext.ui.editor.category" name="WikiText Markup Editing Commands" description="commands for editing lightweight markup"/>

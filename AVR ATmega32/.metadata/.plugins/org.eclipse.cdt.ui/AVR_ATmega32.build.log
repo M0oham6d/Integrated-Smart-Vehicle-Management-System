@@ -1,4 +1,4 @@
-01:08:57 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+01:47:27 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
@@ -16,5 +16,5 @@ Data:        332 bytes (16.2% Full)
 Finished building: sizedummy
  
 
-01:08:58 Build Finished. 0 errors, 0 warnings. (took 699ms)
+01:47:27 Build Finished. 0 errors, 0 warnings. (took 536ms)
 
