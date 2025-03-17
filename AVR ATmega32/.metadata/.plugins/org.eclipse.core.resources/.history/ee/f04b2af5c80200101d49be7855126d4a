@@ -172,23 +172,12 @@ void collisionAvoidance(void)
 			Stop();
 			Buzzer_off();
 		}
-		else
-		{
-			Buzzer_on();
-		}
+		Buzzer_on();
 	}
 
 
 	if(distanceBackward <= 20 && (selection == 'B' || selection == 'A' || selection == 'H'))
 	{
-		if(distanceBackward <= 10)
-		{
-			Stop();
-			Buzzer_off();
-		}
-		else
-		{
-			Buzzer_on();
-		}
+
 	}
 }
