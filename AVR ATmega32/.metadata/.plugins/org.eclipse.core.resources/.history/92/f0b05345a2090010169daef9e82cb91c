@@ -1,0 +1,270 @@
+/******************************************************************************
+ * Module       : Application
+ * File Name    : Application.c
+ * Author       : A7la Team :)
+ * Created on   : 22/11/2024
+ * Description  : Source file for the Application layer
+ *******************************************************************************/
+#include "Application.h"
+
+/*********************** Global Variables ***********************/
+volatile uint16 g_distanceRight    = 0;
+volatile uint16 g_distanceForward  = 0;
+volatile uint16 g_distanceBackward = 0;
+volatile uint8  g_selection 	   = 0;
+
+/****************** Interrupt Service Routines ******************/
+void ISR2(void) {
+	Stop();
+}
+
+void ISR1(void) {
+	Stop();
+}
+
+int main(void)
+{
+	SREG |= (1 << 7);		/* Enable global interrupts */
+
+	UART_Init(&config);
+	UART_SetRxCallback(App_Receive);
+
+	LCD_init();
+	LEDS_init();
+	Buzzer_init();
+	DcMotor_Init(100);
+
+	Ultrasonic_init();
+
+	while (1)
+	{
+		readDistance();			/* Read distances from Three Ultrasonics */
+		collisionAvoidance();	/* Handle collision avoidance mode  */
+	}
+}
+
+/********************* Functions Definitions *********************/
+void App_Receive(uint8 recievedMSG)
+{
+	g_selection = recievedMSG ;
+	switch (recievedMSG)
+	{
+	case 'F':
+		Forward();		/* Move forward */
+		break;
+	case 'B':
+		Backward();		/* Move backward */
+		break;
+	case 'S':
+		Stop();			/* Stop movement */
+		break;
+	case 'R':
+		Right_Forward();	/* Turn right and move forward */
+		break;
+	case 'L':
+		Left_Forward();		/* Turn left and move forward */
+		break;
+	case 'A':
+		Right_Backward();	/* Turn right and move backward */
+		break;
+	case 'H':
+		Left_Backward();	/* Turn left and move backward */
+		break;
+	case 'P':
+		autoParking();		/* Perform auto-parking */
+		break;
+	case 'M':
+		DcMotor_Init(motorSpeed(UART_Receive()));	/* Reinitialize motor with new speed */
+		break;
+	}
+}
+
+uint8 motorSpeed(uint8 speed)
+{
+	switch (speed)
+	{
+	case '1':
+		return MOTOR_SPEED_ONE;		/* Speed level 1 */
+		break;
+	case '2':
+		return MOTOR_SPEED_TWO;		/* Speed level 2 */
+		break;
+	case '3':
+		return MOTOR_MAX_SPEED;		/* Speed level 3 */
+		break;
+	}
+
+	return MOTOR_MAX_SPEED;			/* Default speed */
+}
+
+void readDistance(void)
+{
+	g_distanceRight = Ultrasonic_readDistance(U_right);
+
+	LCD_displayStringRowColumn(0, 0, "R:");
+	LCD_moveCursor(0, 2);
+	LCD_intgerToString(g_distanceRight);
+
+	if (g_distanceRight < 100)
+	{
+		LCD_displayStringRowColumn(0, 5, " ");
+	}
+	if (g_distanceRight > 100)
+	{
+		LCD_displayStringRowColumn(0, 2, "99 ");
+	}
+	if (g_distanceRight < 10)
+	{
+		LCD_displayStringRowColumn(0, 3, " ");
+	}
+
+	_delay_ms(100);
+
+	g_distanceForward = Ultrasonic_readDistance(U_forward);
+
+	LCD_displayStringRowColumn(1, 0, "F:");
+	LCD_moveCursor(1, 2);
+	LCD_intgerToString(g_distanceForward);
+
+	if (g_distanceForward < 100)
+	{
+		LCD_displayStringRowColumn(1, 5, " ");
+	}
+	if (g_distanceForward > 100)
+	{
+		LCD_displayStringRowColumn(1, 2, "99 ");
+	}
+	if (g_distanceForward < 10)
+	{
+		LCD_displayStringRowColumn(1, 3, " ");
+	}
+
+	_delay_ms(100);
+
+	g_distanceBackward = Ultrasonic_readDistance(U_backward);
+
+	LCD_displayStringRowColumn(1, 6, "B:");
+	LCD_moveCursor(1, 9);
+	LCD_intgerToString(g_distanceBackward);
+
+	if (g_distanceBackward < 100)
+	{
+		LCD_displayStringRowColumn(1, 12, " ");
+	}
+	if (g_distanceBackward > 100)
+	{
+		LCD_displayStringRowColumn(1, 9, "99 ");
+	}
+	if (g_distanceBackward < 10)
+	{
+		LCD_displayStringRowColumn(1, 10, " ");
+	}
+
+	_delay_ms(100);
+}
+
+void collisionAvoidance(void)
+{
+	if(g_distanceForward <= 20 && (g_selection == 'F' || g_selection == 'R' || g_selection == 'L'))
+	{
+		if(g_distanceForward <= 10)
+		{
+			Stop();
+			Buzzer_off();
+		}
+		else
+		{
+			Buzzer_on();
+		}
+	}
+
+
+	if(g_distanceBackward <= 20 && (g_selection == 'B' || g_selection == 'A' || g_selection == 'H'))
+	{
+		if(g_distanceBackward <= 10)
+		{
+			Stop();
+			Buzzer_off();
+		}
+		else
+		{
+			Buzzer_on();
+		}
+	}
+}
+
+void autoParking (void)
+{
+	uint8 l_counter = 0;
+
+	LCD_clearScreen();
+
+	_delay_ms(500);
+
+	readDistance();
+
+	Forward();
+
+	while (g_distanceRight >= 40)
+	{
+		readDistance();
+		collisionAvoidance();
+
+		_delay_ms(100);
+
+		l_counter++;
+		if (5 < l_counter)
+		{
+			LCD_displayStringRowColumn(1, 0, "SPACE Available");
+
+			Stop();
+
+			_delay_ms(500);
+			_delay_ms(500);
+
+			Left_Forward_Parking();
+
+			_delay_ms(500);
+
+			Stop();
+
+			_delay_ms(500);
+
+			Backward();
+
+			_delay_ms(500);
+			_delay_ms(500);
+
+			Stop();
+
+			_delay_ms(500);
+
+			Left_Backward();
+
+			_delay_ms(700);
+			_delay_ms(700);
+
+			break;
+		}
+	}
+	if (counter < 5)
+	{
+		LCD_displayStringRowColumn(1, 0, "NO SPACE");
+	}
+	Stop();
+
+
+	/*while (30 <= Ultrasonic_readDistance(U_right))
+	{
+		forward();
+		collisionAvoidance();
+
+	}*/
+
+}
+
+
+
+
+
+

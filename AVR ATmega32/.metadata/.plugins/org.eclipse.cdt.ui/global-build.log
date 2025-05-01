@@ -317,3 +317,706 @@ Data:        332 bytes (16.2% Full)
 
 Finished building: sizedummy
  
+19:46:22 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+./APP/Application.o: In function `autoParking':
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:119: undefined reference to `UART_receiveByte'
+make: *** [AVR_ATmega32.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:47:08 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:49: error: 'selection' undeclared (first use in this function)
+../APP/Application.c:49: error: (Each undeclared identifier is reported only once
+../APP/Application.c:49: error: for each function it appears in.)
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+../APP/Application.c: In function 'readDistance':
+../APP/Application.c:102: error: 'distanceRight' undeclared (first use in this function)
+../APP/Application.c:123: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:144: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'collisionAvoidance':
+../APP/Application.c:168: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:168: error: 'selection' undeclared (first use in this function)
+../APP/Application.c:182: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'autoParking':
+../APP/Application.c:209: error: 'distanceRight' undeclared (first use in this function)
+make: *** [APP/Application.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:47:26 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+../APP/Application.c: In function 'readDistance':
+../APP/Application.c:102: error: 'distanceRight' undeclared (first use in this function)
+../APP/Application.c:102: error: (Each undeclared identifier is reported only once
+../APP/Application.c:102: error: for each function it appears in.)
+../APP/Application.c:123: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:144: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'collisionAvoidance':
+../APP/Application.c:168: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:168: error: 'selection' undeclared (first use in this function)
+../APP/Application.c:182: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'autoParking':
+../APP/Application.c:209: error: 'distanceRight' undeclared (first use in this function)
+make: *** [APP/Application.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:48:17 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+../APP/Application.c: In function 'readDistance':
+../APP/Application.c:137: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:137: error: (Each undeclared identifier is reported only once
+../APP/Application.c:137: error: for each function it appears in.)
+../APP/Application.c: In function 'collisionAvoidance':
+../APP/Application.c:168: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:168: error: 'selection' undeclared (first use in this function)
+../APP/Application.c:182: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'autoParking':
+../APP/Application.c:209: error: 'distanceRight' undeclared (first use in this function)
+make: *** [APP/Application.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:48:27 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+../APP/Application.c: In function 'collisionAvoidance':
+../APP/Application.c:168: error: 'distanceForward' undeclared (first use in this function)
+../APP/Application.c:168: error: (Each undeclared identifier is reported only once
+../APP/Application.c:168: error: for each function it appears in.)
+../APP/Application.c:168: error: 'selection' undeclared (first use in this function)
+../APP/Application.c:182: error: 'distanceBackward' undeclared (first use in this function)
+../APP/Application.c: In function 'autoParking':
+../APP/Application.c:209: error: 'distanceRight' undeclared (first use in this function)
+make: *** [APP/Application.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:48:59 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'App_Receive':
+../APP/Application.c:77: warning: implicit declaration of function 'UART_receiveByte'
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+./APP/Application.o: In function `autoParking':
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:119: undefined reference to `UART_receiveByte'
+make: *** [AVR_ATmega32.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:49:30 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+./APP/Application.o: In function `autoParking':
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:119: undefined reference to `UART_receiveByte'
+make: *** [AVR_ATmega32.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:51:14 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26150 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:52:13 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26150 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:55:14 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'autoParking':
+../APP/Application.c:250: error: 'counter' undeclared (first use in this function)
+../APP/Application.c:250: error: (Each undeclared identifier is reported only once
+../APP/Application.c:250: error: for each function it appears in.)
+make: *** [APP/Application.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:56:30 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   25796 bytes (78.7% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:57:11 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   25796 bytes (78.7% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:14:56 **** Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   25796 bytes (78.7% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:23:51 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   25990 bytes (79.3% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:26:42 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'readDistance':
+../APP/Application.c:170: warning: passing argument 1 of 'UART_SendNumbersWithDelimiter' discards qualifiers from pointer target type
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26050 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        364 bytes (17.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:29:59 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+../MCAL/UART/UART.c:91: error: conflicting types for 'UART_SendNumbersWithDelimiter'
+../MCAL/UART/../UART/UART.h:34: error: previous declaration of 'UART_SendNumbersWithDelimiter' was here
+make: *** [MCAL/UART/UART.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:30:12 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/Application.c: In function 'readDistance':
+../APP/Application.c:170: warning: passing argument 1 of 'UART_SendNumbersWithDelimiter' discards qualifiers from pointer target type
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26050 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        364 bytes (17.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:30:27 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26050 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        364 bytes (17.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:30:59 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26038 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:31:57 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/TIMER/timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/TIMER/timer.d" -MT"MCAL/TIMER/timer.o" -c -o "MCAL/TIMER/timer.o" "../MCAL/TIMER/timer.c"
+../MCAL/TIMER/timer.c: In function 'Timer_setCallBack':
+../MCAL/TIMER/timer.c:310: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:313: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:316: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/TIMER/timer.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26024 bytes (79.4% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:32:14 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../MCAL/TIMER/timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/TIMER/timer.d" -MT"MCAL/TIMER/timer.o" -c -o "MCAL/TIMER/timer.o" "../MCAL/TIMER/timer.c"
+../MCAL/TIMER/timer.c: In function 'Timer_getTimerValue':
+../MCAL/TIMER/timer.c:297: warning: control reaches end of non-void function
+../MCAL/TIMER/timer.c: In function 'Timer_setCallBack':
+../MCAL/TIMER/timer.c:309: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:312: warning: function return types not compatible due to 'volatile'
+../MCAL/TIMER/timer.c:315: warning: function return types not compatible due to 'volatile'
+Finished building: ../MCAL/TIMER/timer.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26038 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:32:30 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26038 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:09:06 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26038 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:09:45 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26038 bytes (79.5% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:40:43 **** Incremental Build of configuration Debug for project AVR_ATmega32 ****
+make all 
+Building file: ../APP/Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"APP/Application.d" -MT"APP/Application.o" -c -o "APP/Application.o" "../APP/Application.c"
+In file included from ../APP/../HAL/Ultrasonic/ultrasonic_sensor.h:15,
+                 from ../APP/Application.h:16,
+                 from ../APP/Application.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/Application.c
+ 
+Building target: AVR_ATmega32.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_ATmega32.map -mmcu=atmega32 -o "AVR_ATmega32.elf"  ./MCAL/UART/UART.o  ./MCAL/TIMER/timer.o  ./MCAL/PWM/pwm.o  ./MCAL/ICU/icu.o  ./MCAL/GPIO/gpio.o  ./MCAL/EXT_INT/EXT_INT.o  ./HAL/Ultrasonic/ultrasonic_sensor.o  ./HAL/PIR/pir.o  ./HAL/MOTOR/motor.o  ./HAL/LCD/lcd.o  ./HAL/BUZZER/buzzer.o  ./HAL/3\ Leds/leds.o  ./APP/Application.o   
+Finished building target: AVR_ATmega32.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_ATmega32.elf  >"AVR_ATmega32.lss"
+Finished building: AVR_ATmega32.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_ATmega32.elf  "AVR_ATmega32.hex"
+Finished building: AVR_ATmega32.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_ATmega32.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26116 bytes (79.7% Full)
+(.text + .data + .bootloader)
+
+Data:        358 bytes (17.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

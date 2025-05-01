@@ -87,3 +87,22 @@ ISR (USART_TXC_vect)		/* ISR for TX complete */
         TxCallback();
     }
 }
+
+void UART_SendNumbersWithDelimiter(const uint16* numbers, uint8 count, char delimiter)
+{
+    char buffer[10];
+    for (uint8 i = 0; i < count; i++)
+    {
+        itoa(numbers[i], buffer, 10);  /* From integer to string */
+        for (uint8 j = 0; buffer[j] != '\0'; j++)
+        {
+            UART_Transmit(buffer[j]);
+        }
+
+        if (i < count - 1)
+        {
+            UART_Transmit(delimiter);
+        }
+    }
+    UART_Transmit('\n'); 	/* If i want */
+}

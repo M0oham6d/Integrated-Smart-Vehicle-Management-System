@@ -9,6 +9,7 @@
 #define MCAL_UART_UART_H_
 
 #include <avr/io.h>
+#include <stdlib.h>  			/* For itoa */
 #include <avr/interrupt.h>
 #include "../../LIB/std_types.h"
 
@@ -29,5 +30,7 @@ uint8 UART_Receive(void);
 /* Optional: Callbacks for RX and TX interrupts */
 void UART_SetRxCallback(void (*callback)(uint8));
 void UART_SetTxCallback(void (*callback)(void));
+
+void UART_SendNumbersWithDelimiter(const uint16* numbers, uint8 count, char delimiter);
 
 #endif /* MCAL_UART6_UART_H_ */

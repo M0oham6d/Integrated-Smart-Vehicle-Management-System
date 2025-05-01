@@ -47,7 +47,7 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o) (__clz_tab)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
-                              ./HAL/LCD/lcd.o (itoa)
+                              ./MCAL/UART/UART.o (itoa)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
 
@@ -172,7 +172,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x5578
+.text           0x00000000     0x64be
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -312,236 +312,242 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.__vector_15
                 0x00001092       0x66 ./MCAL/UART/UART.o
                 0x00001092                __vector_15
+ .text.UART_SendNumbersWithDelimiter
+                0x000010f8       0xc2 ./MCAL/UART/UART.o
+                0x000010f8                UART_SendNumbersWithDelimiter
  .text.__vector_11
-                0x000010f8       0x66 ./MCAL/TIMER/timer.o
-                0x000010f8                __vector_11
+                0x000011ba       0x66 ./MCAL/TIMER/timer.o
+                0x000011ba                __vector_11
  .text.__vector_10
-                0x0000115e       0x66 ./MCAL/TIMER/timer.o
-                0x0000115e                __vector_10
+                0x00001220       0x66 ./MCAL/TIMER/timer.o
+                0x00001220                __vector_10
  .text.__vector_9
-                0x000011c4       0x66 ./MCAL/TIMER/timer.o
-                0x000011c4                __vector_9
+                0x00001286       0x66 ./MCAL/TIMER/timer.o
+                0x00001286                __vector_9
  .text.__vector_7
-                0x0000122a       0x66 ./MCAL/TIMER/timer.o
-                0x0000122a                __vector_7
+                0x000012ec       0x66 ./MCAL/TIMER/timer.o
+                0x000012ec                __vector_7
  .text.__vector_5
-                0x00001290       0x66 ./MCAL/TIMER/timer.o
-                0x00001290                __vector_5
+                0x00001352       0x66 ./MCAL/TIMER/timer.o
+                0x00001352                __vector_5
  .text.__vector_4
-                0x000012f6       0x66 ./MCAL/TIMER/timer.o
-                0x000012f6                __vector_4
+                0x000013b8       0x66 ./MCAL/TIMER/timer.o
+                0x000013b8                __vector_4
  .text.Timer_init
-                0x0000135c      0x1c4 ./MCAL/TIMER/timer.o
-                0x0000135c                Timer_init
+                0x0000141e      0x1c4 ./MCAL/TIMER/timer.o
+                0x0000141e                Timer_init
  .text.Timer_deInit
-                0x00001520       0xda ./MCAL/TIMER/timer.o
-                0x00001520                Timer_deInit
+                0x000015e2       0xda ./MCAL/TIMER/timer.o
+                0x000015e2                Timer_deInit
  .text.Timer_getTimerValue
-                0x000015fa       0x8a ./MCAL/TIMER/timer.o
-                0x000015fa                Timer_getTimerValue
+                0x000016bc       0x8a ./MCAL/TIMER/timer.o
+                0x000016bc                Timer_getTimerValue
  .text.Timer_setCallBack
-                0x00001684       0x72 ./MCAL/TIMER/timer.o
-                0x00001684                Timer_setCallBack
+                0x00001746       0x72 ./MCAL/TIMER/timer.o
+                0x00001746                Timer_setCallBack
  .text.PWM_Timer0_Start
-                0x000016f6       0x96 ./MCAL/PWM/pwm.o
-                0x000016f6                PWM_Timer0_Start
+                0x000017b8       0x96 ./MCAL/PWM/pwm.o
+                0x000017b8                PWM_Timer0_Start
  .text.PWM_Timer2_Start
-                0x0000178c       0x96 ./MCAL/PWM/pwm.o
-                0x0000178c                PWM_Timer2_Start
+                0x0000184e       0x96 ./MCAL/PWM/pwm.o
+                0x0000184e                PWM_Timer2_Start
  .text.__vector_6
-                0x00001822       0x66 ./MCAL/ICU/icu.o
-                0x00001822                __vector_6
+                0x000018e4       0x66 ./MCAL/ICU/icu.o
+                0x000018e4                __vector_6
  .text.ICU_init
-                0x00001888       0xa0 ./MCAL/ICU/icu.o
-                0x00001888                ICU_init
+                0x0000194a       0xa0 ./MCAL/ICU/icu.o
+                0x0000194a                ICU_init
  .text.ICU_setCallBack
-                0x00001928       0x24 ./MCAL/ICU/icu.o
-                0x00001928                ICU_setCallBack
+                0x000019ea       0x24 ./MCAL/ICU/icu.o
+                0x000019ea                ICU_setCallBack
  .text.ICU_setEdgeDetectionType
-                0x0000194c       0x3e ./MCAL/ICU/icu.o
-                0x0000194c                ICU_setEdgeDetectionType
+                0x00001a0e       0x3e ./MCAL/ICU/icu.o
+                0x00001a0e                ICU_setEdgeDetectionType
  .text.ICU_getInputCaptureValue
-                0x0000198a       0x16 ./MCAL/ICU/icu.o
-                0x0000198a                ICU_getInputCaptureValue
+                0x00001a4c       0x16 ./MCAL/ICU/icu.o
+                0x00001a4c                ICU_getInputCaptureValue
  .text.ICU_clearTimerValue
-                0x000019a0       0x16 ./MCAL/ICU/icu.o
-                0x000019a0                ICU_clearTimerValue
+                0x00001a62       0x16 ./MCAL/ICU/icu.o
+                0x00001a62                ICU_clearTimerValue
  .text.ICU_deInit
-                0x000019b6       0x40 ./MCAL/ICU/icu.o
-                0x000019b6                ICU_deInit
+                0x00001a78       0x40 ./MCAL/ICU/icu.o
+                0x00001a78                ICU_deInit
  .text.GPIO_setupPinDirection
-                0x000019f6      0x1d6 ./MCAL/GPIO/gpio.o
-                0x000019f6                GPIO_setupPinDirection
+                0x00001ab8      0x1d6 ./MCAL/GPIO/gpio.o
+                0x00001ab8                GPIO_setupPinDirection
  .text.GPIO_writePin
-                0x00001bcc      0x1d6 ./MCAL/GPIO/gpio.o
-                0x00001bcc                GPIO_writePin
+                0x00001c8e      0x1d6 ./MCAL/GPIO/gpio.o
+                0x00001c8e                GPIO_writePin
  .text.GPIO_readPin
-                0x00001da2      0x136 ./MCAL/GPIO/gpio.o
-                0x00001da2                GPIO_readPin
+                0x00001e64      0x136 ./MCAL/GPIO/gpio.o
+                0x00001e64                GPIO_readPin
  .text.GPIO_setupPortDirection
-                0x00001ed8       0x88 ./MCAL/GPIO/gpio.o
-                0x00001ed8                GPIO_setupPortDirection
+                0x00001f9a       0x88 ./MCAL/GPIO/gpio.o
+                0x00001f9a                GPIO_setupPortDirection
  .text.GPIO_writePort
-                0x00001f60       0x88 ./MCAL/GPIO/gpio.o
-                0x00001f60                GPIO_writePort
+                0x00002022       0x88 ./MCAL/GPIO/gpio.o
+                0x00002022                GPIO_writePort
  .text.GPIO_readPort
-                0x00001fe8       0x8a ./MCAL/GPIO/gpio.o
-                0x00001fe8                GPIO_readPort
+                0x000020aa       0x8a ./MCAL/GPIO/gpio.o
+                0x000020aa                GPIO_readPort
  .text.__vector_1
-                0x00002072       0x66 ./MCAL/EXT_INT/EXT_INT.o
-                0x00002072                __vector_1
+                0x00002134       0x66 ./MCAL/EXT_INT/EXT_INT.o
+                0x00002134                __vector_1
  .text.__vector_2
-                0x000020d8       0x66 ./MCAL/EXT_INT/EXT_INT.o
-                0x000020d8                __vector_2
+                0x0000219a       0x66 ./MCAL/EXT_INT/EXT_INT.o
+                0x0000219a                __vector_2
  .text.__vector_3
-                0x0000213e       0x66 ./MCAL/EXT_INT/EXT_INT.o
-                0x0000213e                __vector_3
+                0x00002200       0x66 ./MCAL/EXT_INT/EXT_INT.o
+                0x00002200                __vector_3
  .text.external_interrupt_init
-                0x000021a4      0x108 ./MCAL/EXT_INT/EXT_INT.o
-                0x000021a4                external_interrupt_init
+                0x00002266      0x108 ./MCAL/EXT_INT/EXT_INT.o
+                0x00002266                external_interrupt_init
  .text.external_interrupt_deinit
-                0x000022ac       0x98 ./MCAL/EXT_INT/EXT_INT.o
-                0x000022ac                external_interrupt_deinit
+                0x0000236e       0x98 ./MCAL/EXT_INT/EXT_INT.o
+                0x0000236e                external_interrupt_deinit
  .text.external_interrupt_setCallBack
-                0x00002344       0x72 ./MCAL/EXT_INT/EXT_INT.o
-                0x00002344                external_interrupt_setCallBack
+                0x00002406       0x72 ./MCAL/EXT_INT/EXT_INT.o
+                0x00002406                external_interrupt_setCallBack
  .text.Ultrasonic_init
-                0x000023b6       0x6a ./HAL/Ultrasonic/ultrasonic_sensor.o
-                0x000023b6                Ultrasonic_init
+                0x00002478       0x6a ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x00002478                Ultrasonic_init
  .text.Ultrasonic_Trigger
-                0x00002420      0x570 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x000024e2      0x570 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .text.Ultrasonic_readDistance
-                0x00002990      0x16e ./HAL/Ultrasonic/ultrasonic_sensor.o
-                0x00002990                Ultrasonic_readDistance
+                0x00002a52      0x16e ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x00002a52                Ultrasonic_readDistance
  .text.Ultrasonic_edgeProcessing_INT0
-                0x00002afe       0xd0 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x00002bc0       0xd0 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .text.Ultrasonic_edgeProcessing_INT2
-                0x00002bce       0xd4 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x00002c90       0xd4 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .text.PIR_init
-                0x00002ca2       0x22 ./HAL/PIR/pir.o
-                0x00002ca2                PIR_init
+                0x00002d64       0x22 ./HAL/PIR/pir.o
+                0x00002d64                PIR_init
  .text.PIR_ReadValue1
-                0x00002cc4       0x16 ./HAL/PIR/pir.o
-                0x00002cc4                PIR_ReadValue1
+                0x00002d86       0x16 ./HAL/PIR/pir.o
+                0x00002d86                PIR_ReadValue1
  .text.PIR_ReadValue2
-                0x00002cda       0x16 ./HAL/PIR/pir.o
-                0x00002cda                PIR_ReadValue2
+                0x00002d9c       0x16 ./HAL/PIR/pir.o
+                0x00002d9c                PIR_ReadValue2
  .text.Handel_Max_Speed
-                0x00002cf0       0x1a ./HAL/MOTOR/motor.o
+                0x00002db2       0x1a ./HAL/MOTOR/motor.o
  .text.DcMotor_Init
-                0x00002d0a       0x7e ./HAL/MOTOR/motor.o
-                0x00002d0a                DcMotor_Init
+                0x00002dcc       0x7e ./HAL/MOTOR/motor.o
+                0x00002dcc                DcMotor_Init
  .text.DcMotor1_Rotate
-                0x00002d88       0xa4 ./HAL/MOTOR/motor.o
-                0x00002d88                DcMotor1_Rotate
+                0x00002e4a       0xa4 ./HAL/MOTOR/motor.o
+                0x00002e4a                DcMotor1_Rotate
  .text.DcMotor2_Rotate
-                0x00002e2c       0xa4 ./HAL/MOTOR/motor.o
-                0x00002e2c                DcMotor2_Rotate
- .text.Forward  0x00002ed0      0x142 ./HAL/MOTOR/motor.o
-                0x00002ed0                Forward
+                0x00002eee       0xa4 ./HAL/MOTOR/motor.o
+                0x00002eee                DcMotor2_Rotate
+ .text.Forward  0x00002f92      0x142 ./HAL/MOTOR/motor.o
+                0x00002f92                Forward
  .text.Backward
-                0x00003012      0x142 ./HAL/MOTOR/motor.o
-                0x00003012                Backward
- .text.Stop     0x00003154       0x1e ./HAL/MOTOR/motor.o
-                0x00003154                Stop
+                0x000030d4      0x142 ./HAL/MOTOR/motor.o
+                0x000030d4                Backward
+ .text.Stop     0x00003216       0x1e ./HAL/MOTOR/motor.o
+                0x00003216                Stop
  .text.Right_Forward
-                0x00003172      0x140 ./HAL/MOTOR/motor.o
-                0x00003172                Right_Forward
+                0x00003234      0x140 ./HAL/MOTOR/motor.o
+                0x00003234                Right_Forward
  .text.Left_Forward
-                0x000032b2      0x140 ./HAL/MOTOR/motor.o
-                0x000032b2                Left_Forward
+                0x00003374      0x140 ./HAL/MOTOR/motor.o
+                0x00003374                Left_Forward
  .text.Left_Forward_Parking
-                0x000033f2      0x138 ./HAL/MOTOR/motor.o
-                0x000033f2                Left_Forward_Parking
+                0x000034b4      0x138 ./HAL/MOTOR/motor.o
+                0x000034b4                Left_Forward_Parking
  .text.Right_Backward
-                0x0000352a      0x140 ./HAL/MOTOR/motor.o
-                0x0000352a                Right_Backward
+                0x000035ec      0x140 ./HAL/MOTOR/motor.o
+                0x000035ec                Right_Backward
  .text.Left_Backward
-                0x0000366a      0x140 ./HAL/MOTOR/motor.o
-                0x0000366a                Left_Backward
+                0x0000372c      0x140 ./HAL/MOTOR/motor.o
+                0x0000372c                Left_Backward
  .text.LCD_init
-                0x000037aa      0x164 ./HAL/LCD/lcd.o
-                0x000037aa                LCD_init
+                0x0000386c      0x164 ./HAL/LCD/lcd.o
+                0x0000386c                LCD_init
  .text.LCD_sendCommand
-                0x0000390e      0x8f6 ./HAL/LCD/lcd.o
-                0x0000390e                LCD_sendCommand
+                0x000039d0      0x8f6 ./HAL/LCD/lcd.o
+                0x000039d0                LCD_sendCommand
  .text.LCD_displayCharacter
-                0x00004204      0x8f6 ./HAL/LCD/lcd.o
-                0x00004204                LCD_displayCharacter
+                0x000042c6      0x8f6 ./HAL/LCD/lcd.o
+                0x000042c6                LCD_displayCharacter
  .text.LCD_displayString
-                0x00004afa       0x52 ./HAL/LCD/lcd.o
-                0x00004afa                LCD_displayString
+                0x00004bbc       0x52 ./HAL/LCD/lcd.o
+                0x00004bbc                LCD_displayString
  .text.LCD_moveCursor
-                0x00004b4c       0x84 ./HAL/LCD/lcd.o
-                0x00004b4c                LCD_moveCursor
+                0x00004c0e       0x84 ./HAL/LCD/lcd.o
+                0x00004c0e                LCD_moveCursor
  .text.LCD_displayStringRowColumn
-                0x00004bd0       0x32 ./HAL/LCD/lcd.o
-                0x00004bd0                LCD_displayStringRowColumn
+                0x00004c92       0x32 ./HAL/LCD/lcd.o
+                0x00004c92                LCD_displayStringRowColumn
  .text.LCD_intgerToString
-                0x00004c02       0x46 ./HAL/LCD/lcd.o
-                0x00004c02                LCD_intgerToString
+                0x00004cc4       0x46 ./HAL/LCD/lcd.o
+                0x00004cc4                LCD_intgerToString
  .text.LCD_clearScreen
-                0x00004c48       0x14 ./HAL/LCD/lcd.o
-                0x00004c48                LCD_clearScreen
+                0x00004d0a       0x14 ./HAL/LCD/lcd.o
+                0x00004d0a                LCD_clearScreen
  .text.Buzzer_init
-                0x00004c5c       0x1c ./HAL/BUZZER/buzzer.o
-                0x00004c5c                Buzzer_init
+                0x00004d1e       0x1c ./HAL/BUZZER/buzzer.o
+                0x00004d1e                Buzzer_init
  .text.Buzzer_on
-                0x00004c78       0x18 ./HAL/BUZZER/buzzer.o
-                0x00004c78                Buzzer_on
+                0x00004d3a       0x18 ./HAL/BUZZER/buzzer.o
+                0x00004d3a                Buzzer_on
  .text.Buzzer_off
-                0x00004c90       0x18 ./HAL/BUZZER/buzzer.o
-                0x00004c90                Buzzer_off
+                0x00004d52       0x18 ./HAL/BUZZER/buzzer.o
+                0x00004d52                Buzzer_off
  .text.LEDS_init
-                0x00004ca8       0x4a ./HAL/3 Leds/leds.o
-                0x00004ca8                LEDS_init
- .text.LED_on   0x00004cf2       0x62 ./HAL/3 Leds/leds.o
-                0x00004cf2                LED_on
- .text.LED_off  0x00004d54       0x62 ./HAL/3 Leds/leds.o
-                0x00004d54                LED_off
- .text.ISR2     0x00004db6       0x12 ./APP/Application.o
-                0x00004db6                ISR2
- .text.ISR1     0x00004dc8       0x12 ./APP/Application.o
-                0x00004dc8                ISR1
- .text.main     0x00004dda       0x46 ./APP/Application.o
-                0x00004dda                main
+                0x00004d6a       0x4a ./HAL/3 Leds/leds.o
+                0x00004d6a                LEDS_init
+ .text.LED_on   0x00004db4       0x62 ./HAL/3 Leds/leds.o
+                0x00004db4                LED_on
+ .text.LED_off  0x00004e16       0x62 ./HAL/3 Leds/leds.o
+                0x00004e16                LED_off
+ .text.ISR2     0x00004e78       0x12 ./APP/Application.o
+                0x00004e78                ISR2
+ .text.ISR1     0x00004e8a       0x12 ./APP/Application.o
+                0x00004e8a                ISR1
+ .text.main     0x00004e9c       0x46 ./APP/Application.o
+                0x00004e9c                main
  .text.App_Receive
-                0x00004e20       0xa6 ./APP/Application.o
-                0x00004e20                App_Receive
+                0x00004ee2       0xe8 ./APP/Application.o
+                0x00004ee2                App_Receive
  .text.motorSpeed
-                0x00004ec6       0x5c ./APP/Application.o
-                0x00004ec6                motorSpeed
+                0x00004fca       0x5c ./APP/Application.o
+                0x00004fca                motorSpeed
  .text.readDistance
-                0x00004f22      0x45e ./APP/Application.o
-                0x00004f22                readDistance
+                0x00005026      0x4dc ./APP/Application.o
+                0x00005026                readDistance
  .text.collisionAvoidance
-                0x00005380       0x92 ./APP/Application.o
-                0x00005380                collisionAvoidance
- .text.libgcc   0x00005412       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00005412                __divmodhi4
-                0x00005412                _div
- .text.libgcc   0x00005438       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00005438                __udivmodsi4
- .text.libgcc   0x0000547c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000547c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000547c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000547c       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x0000547c                __udivmodhi4
- .text.libgcc   0x000054a4       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000054a4                __prologue_saves__
- .text.libgcc   0x000054dc       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000054dc                __epilogue_restores__
+                0x00005502       0x92 ./APP/Application.o
+                0x00005502                collisionAvoidance
+ .text.autoParking
+                0x00005594      0xdc4 ./APP/Application.o
+                0x00005594                autoParking
+ .text.libgcc   0x00006358       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00006358                __divmodhi4
+                0x00006358                _div
+ .text.libgcc   0x0000637e       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x0000637e                __udivmodsi4
+ .text.libgcc   0x000063c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000063c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000063c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000063c2       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000063c2                __udivmodhi4
+ .text.libgcc   0x000063ea       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x000063ea                __prologue_saves__
+ .text.libgcc   0x00006422       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00006422                __epilogue_restores__
  .text.avr-libc
-                0x00005512       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
-                0x00005512                itoa
+                0x00006458       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x00006458                itoa
  .text.avr-libc
-                0x00005554       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
-                0x00005554                strrev
-                0x00005574                . = ALIGN (0x2)
+                0x0000649a       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x0000649a                strrev
+                0x000064ba                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00005574        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00005574                exit
-                0x00005574                _exit
+ .fini9         0x000064ba        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000064ba                exit
+                0x000064ba                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -560,11 +566,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00005574        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000064ba        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00005578                _etext = .
+                0x000064be                _etext = .
 
-.data           0x00800060      0x12c load address 0x00005578
+.data           0x00800060      0x146 load address 0x000064be
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -580,143 +586,144 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x00800060        0x0 ./HAL/LCD/lcd.o
  .data          0x00800060        0x0 ./HAL/BUZZER/buzzer.o
  .data          0x00800060        0x0 ./HAL/3 Leds/leds.o
- .data          0x00800060        0xf ./APP/Application.o
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .data          0x0080006f        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x0080006f        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x0080006f                __thenan_sf
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x00800077        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .data          0x00800077      0x100 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
-                0x00800077                __clz_tab
- .data          0x00800177        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
- .data          0x00800177        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x00800060       0x28 ./APP/Application.o
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .data          0x00800088        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x00800088        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x00800088                __thenan_sf
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x00800090        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800090      0x100 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x00800090                __clz_tab
+ .data          0x00800190        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x00800190        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
  *(.data*)
- .data.config   0x00800177        0x7 ./APP/Application.o
-                0x00800177                config
+ .data.config   0x00800190        0x7 ./APP/Application.o
+                0x00800190                config
  *(.rodata)
  *(.rodata*)
  .rodata.C.6.1459
-                0x0080017e        0x7 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x00800197        0x7 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .rodata.C.12.1476
-                0x00800185        0x7 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x0080019e        0x7 ./HAL/Ultrasonic/ultrasonic_sensor.o
  *(.gnu.linkonce.d*)
-                0x0080018c                . = ALIGN (0x2)
-                0x0080018c                _edata = .
-                0x0080018c                PROVIDE (__data_end, .)
+                0x008001a6                . = ALIGN (0x2)
+ *fill*         0x008001a5        0x1 00
+                0x008001a6                _edata = .
+                0x008001a6                PROVIDE (__data_end, .)
 
-.bss            0x0080018c       0x20
-                0x0080018c                PROVIDE (__bss_start, .)
+.bss            0x008001a6       0x20
+                0x008001a6                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x0080018c        0x0 ./MCAL/UART/UART.o
- .bss           0x0080018c        0x0 ./MCAL/TIMER/timer.o
- .bss           0x0080018c        0x0 ./MCAL/PWM/pwm.o
- .bss           0x0080018c        0x0 ./MCAL/ICU/icu.o
- .bss           0x0080018c        0x0 ./MCAL/GPIO/gpio.o
- .bss           0x0080018c        0x0 ./MCAL/EXT_INT/EXT_INT.o
- .bss           0x0080018c        0x0 ./HAL/Ultrasonic/ultrasonic_sensor.o
- .bss           0x0080018c        0x0 ./HAL/PIR/pir.o
- .bss           0x0080018c        0x0 ./HAL/MOTOR/motor.o
- .bss           0x0080018c        0x0 ./HAL/LCD/lcd.o
- .bss           0x0080018c        0x0 ./HAL/BUZZER/buzzer.o
- .bss           0x0080018c        0x0 ./HAL/3 Leds/leds.o
- .bss           0x0080018c        0x0 ./APP/Application.o
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
- .bss           0x0080018c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008001a6        0x0 ./MCAL/UART/UART.o
+ .bss           0x008001a6        0x0 ./MCAL/TIMER/timer.o
+ .bss           0x008001a6        0x0 ./MCAL/PWM/pwm.o
+ .bss           0x008001a6        0x0 ./MCAL/ICU/icu.o
+ .bss           0x008001a6        0x0 ./MCAL/GPIO/gpio.o
+ .bss           0x008001a6        0x0 ./MCAL/EXT_INT/EXT_INT.o
+ .bss           0x008001a6        0x0 ./HAL/Ultrasonic/ultrasonic_sensor.o
+ .bss           0x008001a6        0x0 ./HAL/PIR/pir.o
+ .bss           0x008001a6        0x0 ./HAL/MOTOR/motor.o
+ .bss           0x008001a6        0x0 ./HAL/LCD/lcd.o
+ .bss           0x008001a6        0x0 ./HAL/BUZZER/buzzer.o
+ .bss           0x008001a6        0x0 ./HAL/3 Leds/leds.o
+ .bss           0x008001a6        0x0 ./APP/Application.o
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x008001a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
  *(.bss*)
  .bss.RxCallback
-                0x0080018c        0x2 ./MCAL/UART/UART.o
+                0x008001a6        0x2 ./MCAL/UART/UART.o
  .bss.TxCallback
-                0x0080018e        0x2 ./MCAL/UART/UART.o
+                0x008001a8        0x2 ./MCAL/UART/UART.o
  .bss.g_callBackPtr_timer0
-                0x00800190        0x2 ./MCAL/TIMER/timer.o
+                0x008001aa        0x2 ./MCAL/TIMER/timer.o
  .bss.g_callBackPtr_timer1
-                0x00800192        0x2 ./MCAL/TIMER/timer.o
+                0x008001ac        0x2 ./MCAL/TIMER/timer.o
  .bss.g_callBackPtr_timer2
-                0x00800194        0x2 ./MCAL/TIMER/timer.o
+                0x008001ae        0x2 ./MCAL/TIMER/timer.o
  .bss.g_callBackPtr
-                0x00800196        0x2 ./MCAL/ICU/icu.o
+                0x008001b0        0x2 ./MCAL/ICU/icu.o
  .bss.g_callBackPtr_INT0
-                0x00800198        0x2 ./MCAL/EXT_INT/EXT_INT.o
+                0x008001b2        0x2 ./MCAL/EXT_INT/EXT_INT.o
  .bss.g_callBackPtr_INT1
-                0x0080019a        0x2 ./MCAL/EXT_INT/EXT_INT.o
+                0x008001b4        0x2 ./MCAL/EXT_INT/EXT_INT.o
  .bss.g_callBackPtr_INT2
-                0x0080019c        0x2 ./MCAL/EXT_INT/EXT_INT.o
+                0x008001b6        0x2 ./MCAL/EXT_INT/EXT_INT.o
  .bss.g_highTime_INT0
-                0x0080019e        0x2 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x008001b8        0x2 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .bss.g_edgeTime_INT0
-                0x008001a0        0x1 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x008001ba        0x1 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .bss.g_highTime_INT1
-                0x008001a1        0x2 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x008001bb        0x2 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .bss.g_edgeTime_INT1
-                0x008001a3        0x1 ./HAL/Ultrasonic/ultrasonic_sensor.o
+                0x008001bd        0x1 ./HAL/Ultrasonic/ultrasonic_sensor.o
  .bss.max_Speed
-                0x008001a4        0x1 ./HAL/MOTOR/motor.o
-                0x008001a4                max_Speed
- .bss.distanceRight
-                0x008001a5        0x2 ./APP/Application.o
-                0x008001a5                distanceRight
- .bss.distanceForward
-                0x008001a7        0x2 ./APP/Application.o
-                0x008001a7                distanceForward
- .bss.distanceBackward
-                0x008001a9        0x2 ./APP/Application.o
-                0x008001a9                distanceBackward
- .bss.selection
-                0x008001ab        0x1 ./APP/Application.o
-                0x008001ab                selection
+                0x008001be        0x1 ./HAL/MOTOR/motor.o
+                0x008001be                max_Speed
+ .bss.g_distanceRight
+                0x008001bf        0x2 ./APP/Application.o
+                0x008001bf                g_distanceRight
+ .bss.g_distanceForward
+                0x008001c1        0x2 ./APP/Application.o
+                0x008001c1                g_distanceForward
+ .bss.g_distanceBackward
+                0x008001c3        0x2 ./APP/Application.o
+                0x008001c3                g_distanceBackward
+ .bss.g_selection
+                0x008001c5        0x1 ./APP/Application.o
+                0x008001c5                g_selection
  *(COMMON)
-                0x008001ac                PROVIDE (__bss_end, .)
-                0x00005578                __data_load_start = LOADADDR (.data)
-                0x000056a4                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008001c6                PROVIDE (__bss_end, .)
+                0x000064be                __data_load_start = LOADADDR (.data)
+                0x00006604                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008001ac        0x0
-                0x008001ac                PROVIDE (__noinit_start, .)
+.noinit         0x008001c6        0x0
+                0x008001c6                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008001ac                PROVIDE (__noinit_end, .)
-                0x008001ac                _end = .
-                0x008001ac                PROVIDE (__heap_start, .)
+                0x008001c6                PROVIDE (__noinit_end, .)
+                0x008001c6                _end = .
+                0x008001c6                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -734,37 +741,37 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x5a90
+.stab           0x00000000     0x65ac
  *(.stab)
- .stab          0x00000000      0x66c ./MCAL/UART/UART.o
- .stab          0x0000066c      0x6c0 ./MCAL/TIMER/timer.o
+ .stab          0x00000000      0x7f8 ./MCAL/UART/UART.o
+ .stab          0x000007f8      0x6c0 ./MCAL/TIMER/timer.o
                                 0x87c (size before relaxing)
- .stab          0x00000d2c      0x2b8 ./MCAL/PWM/pwm.o
+ .stab          0x00000eb8      0x2b8 ./MCAL/PWM/pwm.o
                                 0x474 (size before relaxing)
- .stab          0x00000fe4      0x414 ./MCAL/ICU/icu.o
+ .stab          0x00001170      0x414 ./MCAL/ICU/icu.o
                                 0x5d0 (size before relaxing)
- .stab          0x000013f8      0x6c0 ./MCAL/GPIO/gpio.o
+ .stab          0x00001584      0x6c0 ./MCAL/GPIO/gpio.o
                                 0x87c (size before relaxing)
- .stab          0x00001ab8      0x498 ./MCAL/EXT_INT/EXT_INT.o
+ .stab          0x00001c44      0x498 ./MCAL/EXT_INT/EXT_INT.o
                                 0x654 (size before relaxing)
- .stab          0x00001f50      0xa98 ./HAL/Ultrasonic/ultrasonic_sensor.o
+ .stab          0x000020dc      0xa98 ./HAL/Ultrasonic/ultrasonic_sensor.o
                                 0xc60 (size before relaxing)
- .stab          0x000029e8      0x2b8 ./HAL/PIR/pir.o
+ .stab          0x00002b74      0x2b8 ./HAL/PIR/pir.o
                                 0x474 (size before relaxing)
- .stab          0x00002ca0      0xd68 ./HAL/MOTOR/motor.o
+ .stab          0x00002e2c      0xd68 ./HAL/MOTOR/motor.o
                                 0xef4 (size before relaxing)
- .stab          0x00003a08     0x10f8 ./HAL/LCD/lcd.o
+ .stab          0x00003b94     0x10f8 ./HAL/LCD/lcd.o
                                0x1290 (size before relaxing)
- .stab          0x00004b00      0x27c ./HAL/BUZZER/buzzer.o
+ .stab          0x00004c8c      0x27c ./HAL/BUZZER/buzzer.o
                                 0x288 (size before relaxing)
- .stab          0x00004d7c      0x324 ./HAL/3 Leds/leds.o
+ .stab          0x00004f08      0x324 ./HAL/3 Leds/leds.o
                                 0x330 (size before relaxing)
- .stab          0x000050a0      0x9f0 ./APP/Application.o
-                                0xbac (size before relaxing)
+ .stab          0x0000522c     0x1380 ./APP/Application.o
+                               0x1590 (size before relaxing)
 
-.stabstr        0x00000000     0x2bf3
+.stabstr        0x00000000     0x2f5b
  *(.stabstr)
- .stabstr       0x00000000     0x2bf3 ./MCAL/UART/UART.o
+ .stabstr       0x00000000     0x2f5b ./MCAL/UART/UART.o
 
 .stab.excl
  *(.stab.excl)

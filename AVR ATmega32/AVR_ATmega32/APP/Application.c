@@ -8,10 +8,10 @@
 #include "Application.h"
 
 /*********************** Global Variables ***********************/
-volatile uint16 distanceRight    = 0;
-volatile uint16 distanceForward  = 0;
-volatile uint16 distanceBackward = 0;
-uint8 selection = 0 ;
+volatile uint16 g_distanceRight    = 0;
+volatile uint16 g_distanceForward  = 0;
+volatile uint16 g_distanceBackward = 0;
+volatile uint8  g_selection 	   = 0;
 
 /****************** Interrupt Service Routines ******************/
 void ISR2(void) {
@@ -32,13 +32,13 @@ int main(void)
 	LCD_init();
 	LEDS_init();
 	Buzzer_init();
-	DcMotor_Init(100);
+	DcMotor_Init(MOTOR_MAX_SPEED);
 
 	Ultrasonic_init();
 
 	while (1)
 	{
-		readDistance();		/* Read distances from Three Ultrasonics */
+		readDistance();			/* Read distances from Three Ultrasonics */
 		collisionAvoidance();	/* Handle collision avoidance mode  */
 	}
 }
@@ -46,128 +46,137 @@ int main(void)
 /********************* Functions Definitions *********************/
 void App_Receive(uint8 recievedMSG)
 {
-	selection = recievedMSG ;
+	g_selection = recievedMSG ;
 	switch (recievedMSG)
 	{
 	case 'F':
-		Forward();  //Move forward
+		Forward();		/* Move forward */
 		break;
 	case 'B':
-		Backward();  //Move backward
+		Backward();		/* Move backward */
 		break;
 	case 'S':
-		Stop();  //Stop movement
+		Stop();			/* Stop movement */
 		break;
 	case 'R':
-		Right_Forward();  //Turn right and move forward
+		Right_Forward();	/* Turn right and move forward */
 		break;
 	case 'L':
-		Left_Forward();  //Turn left and move forward
+		Left_Forward();		/* Turn left and move forward */
 		break;
 	case 'A':
-		Right_Backward();  //Turn right and move backward
+		Right_Backward();	/* Turn right and move backward */
 		break;
 	case 'H':
-		Left_Backward(); /*Turn left and move backward*/
+		Left_Backward();	/* Turn left and move backward */
 		break;
 	case 'P':
-		// autoParking();	// Perform auto-parking
+		autoParking();		/* Perform auto-parking */
 		break;
-	case 'M':
-		// DcMotor_Init(motorSpeed(UART_receiveByte()));   //Reinitialize motor with new speed
-		break;
-	}
-}
-
-uint8 motorSpeed(uint8 speed)
-{
-	switch (speed)
-	{
 	case '1':
-		return MOTOR_SPEED_ONE;  // Speed level 1
+		DcMotor_Init(MOTOR_SPEED_ONE);	/* Reinitialize motor with new speed */
 		break;
 	case '2':
-		return MOTOR_SPEED_TWO;  // Speed level 2
+		DcMotor_Init(MOTOR_SPEED_TWO);	/* Reinitialize motor with new speed */
 		break;
 	case '3':
-		return MOTOR_MAX_SPEED;  // Speed level 3
+		DcMotor_Init(MOTOR_MAX_SPEED);	/* Reinitialize motor with new speed */
 		break;
 	}
-
-	return MOTOR_MAX_SPEED;  // Default speed
 }
 
 void readDistance(void)
 {
-	distanceRight = Ultrasonic_readDistance(U_right);
+	uint16 l_nums[3];
+
+	g_distanceRight = Ultrasonic_readDistance(U_right);
 
 	LCD_displayStringRowColumn(0, 0, "R:");
 	LCD_moveCursor(0, 2);
-	LCD_intgerToString(distanceRight);
+	LCD_intgerToString(g_distanceRight);
 
-	if (distanceRight < 100)
+	if (g_distanceRight < 100)
 	{
 		LCD_displayStringRowColumn(0, 5, " ");
 	}
-	if (distanceRight > 100)
+	if (g_distanceRight >= 100)
 	{
 		LCD_displayStringRowColumn(0, 2, "99 ");
 	}
-	if (distanceRight < 10)
+	if (g_distanceRight < 10)
 	{
 		LCD_displayStringRowColumn(0, 3, " ");
 	}
 
 	_delay_ms(100);
 
-	distanceForward = Ultrasonic_readDistance(U_forward);
+	g_distanceForward = Ultrasonic_readDistance(U_forward);
 
 	LCD_displayStringRowColumn(1, 0, "F:");
 	LCD_moveCursor(1, 2);
-	LCD_intgerToString(distanceForward);
+	LCD_intgerToString(g_distanceForward);
 
-	if (distanceForward < 100)
+	if (g_distanceForward < 100)
 	{
 		LCD_displayStringRowColumn(1, 5, " ");
 	}
-	if (distanceForward > 100)
+	if (g_distanceForward >= 100)
 	{
 		LCD_displayStringRowColumn(1, 2, "99 ");
 	}
-	if (distanceForward < 10)
+	if (g_distanceForward < 10)
 	{
 		LCD_displayStringRowColumn(1, 3, " ");
 	}
 
 	_delay_ms(100);
 
-	distanceBackward = Ultrasonic_readDistance(U_backward);
+	g_distanceBackward = Ultrasonic_readDistance(U_backward);
 
 	LCD_displayStringRowColumn(1, 6, "B:");
 	LCD_moveCursor(1, 9);
-	LCD_intgerToString(distanceBackward);
+	LCD_intgerToString(g_distanceBackward);
 
-	if (distanceBackward < 100)
+	if (g_distanceBackward < 100)
 	{
 		LCD_displayStringRowColumn(1, 12, " ");
 	}
-	if (distanceBackward > 100)
+	if (g_distanceBackward >= 100)
 	{
 		LCD_displayStringRowColumn(1, 9, "99 ");
 	}
-	if (distanceBackward < 10)
+	if (g_distanceBackward < 10)
 	{
 		LCD_displayStringRowColumn(1, 10, " ");
 	}
 
 	_delay_ms(100);
+
+	if(g_distanceRight >= 100)
+	{
+		g_distanceRight = 99;
+	}
+	if(g_distanceForward >= 100)
+	{
+		g_distanceForward = 99;
+	}
+	if(g_distanceBackward >= 100)
+	{
+		g_distanceBackward = 99;
+	}
+
+	l_nums[0] = g_distanceRight;
+	l_nums[1] = g_distanceForward;
+	l_nums[2] = g_distanceBackward;
+
+	UART_SendNumbersWithDelimiter(l_nums, 3, ',');
 }
 
 void collisionAvoidance(void)
 {
-	if(distanceForward <= 20 && (selection == 'F' || selection == 'R' || selection == 'L'))
+	if(g_distanceForward <= 20 && (g_selection == 'F' || g_selection == 'R' || g_selection == 'L'))
 	{
-		if(distanceForward <= 10)
+		if(g_distanceForward <= 10)
 		{
 			Stop();
 			Buzzer_off();
@@ -179,9 +188,9 @@ void collisionAvoidance(void)
 	}
 
 
-	if(distanceBackward <= 20 && (selection == 'B' || selection == 'A' || selection == 'H'))
+	if(g_distanceBackward <= 20 && (g_selection == 'B' || g_selection == 'A' || g_selection == 'H'))
 	{
-		if(distanceBackward <= 10)
+		if(g_distanceBackward <= 10)
 		{
 			Stop();
 			Buzzer_off();
@@ -191,4 +200,66 @@ void collisionAvoidance(void)
 			Buzzer_on();
 		}
 	}
+}
+
+void autoParking (void)
+{
+	uint8 l_counter = 0;
+
+	LCD_clearScreen();
+
+	_delay_ms(500);
+
+	readDistance();
+
+	Forward();
+
+	while (30 <= g_distanceRight)
+	{
+		readDistance();
+		collisionAvoidance();
+
+		_delay_ms(100);
+
+		l_counter++;
+		if (5 < l_counter)
+		{
+			LCD_displayStringRowColumn(1, 0, "SPACE Available");
+
+			Stop();
+
+			_delay_ms(500);
+			_delay_ms(500);
+
+			Left_Forward_Parking();
+
+			_delay_ms(500);
+
+			Stop();
+
+			_delay_ms(500);
+
+			Backward();
+
+			_delay_ms(500);
+			_delay_ms(500);
+
+			Stop();
+
+			_delay_ms(500);
+
+			Left_Backward();
+
+			_delay_ms(700);
+			_delay_ms(700);
+
+			break;
+		}
+	}
+	if (5 > l_counter)
+	{
+		LCD_displayStringRowColumn(1, 0, "NO SPACE");
+	}
+
+	Stop();
 }
