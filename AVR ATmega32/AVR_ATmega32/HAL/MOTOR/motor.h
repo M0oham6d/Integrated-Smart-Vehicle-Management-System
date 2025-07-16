@@ -17,13 +17,10 @@
 
 #define DELAY_MOTOR                 (0)      /* Delay for motor operations (if needed) */
 #define MOTOR_STOP                  (0)      /* Motor stop speed */
-#define MOTOR_MINIMUM_SPEED         (25)     /* Motor minimum speed */
-#define MOTOR_SECOND_SPEED          (50)     /* Motor second speed level */
-#define MOTOR_THIRD_SPEED           (75)     /* Motor third speed level */
-#define MOTOR_MAX_SPEED             (100)    /* Motor maximum speed */
 
 #define MOTOR_SPEED_ONE             (70)     /* Motor first speed */
 #define MOTOR_SPEED_TWO             (85)     /* Motor second speed */
+#define MOTOR_MAX_SPEED             (100)    /* Motor maximum speed */
 
 #define MOTOR_PORT_CONNECTION       PORTC_ID /* Motor port connection */
 #define PIN_INT1                    PIN4_ID  /* Motor pin INT1 */
@@ -104,7 +101,13 @@ void Left_Forward(void);
  * Description :
  * Function to turn the car left while moving forward (for parking).
  */
-void Left_Forward_Parking(void);
+void Forward_Parking(uint8 speed);
+void Backward_Parking(uint8 speed);
+void Right_Forward_Parking(uint8 speed);
+void Left_Forward_Parking(uint8 speed);
+void Right_Backward_Parking(uint8 speed);
+void Left_Backward_Parking(uint8 speed);
+
 
 /*
  * Description :

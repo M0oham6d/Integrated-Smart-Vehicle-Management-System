@@ -6,8 +6,8 @@
 #include <Adafruit_BMP085_U.h>   // Include Adafruit BMP085 library
 
 // WiFi credentials
-const char* ssid = "TP-Link";        // WiFi network name
-const char* password = "Aymanm3000##"; // WiFi password
+const char* ssid = "realme 7 Pro";        // WiFi network name
+const char* password = "01012069129"; // WiFi password
 
 // MQTT Broker settings
 const char* mqtt_server = "Test.mosquitto.org"; // MQTT Broker IP address

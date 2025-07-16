@@ -14,6 +14,7 @@ volatile uint16 g_distanceBackward = 0;
 volatile uint8  g_selection 	   = 0;
 
 /****************** Interrupt Service Routines ******************/
+/*
 void ISR2(void) {
 	Stop();
 }
@@ -21,6 +22,7 @@ void ISR2(void) {
 void ISR1(void) {
 	Stop();
 }
+*/
 
 int main(void)
 {
@@ -32,7 +34,7 @@ int main(void)
 	LCD_init();
 	LEDS_init();
 	Buzzer_init();
-	DcMotor_Init(MOTOR_MAX_SPEED);
+	DcMotor_Init(MOTOR_SPEED_ONE);
 
 	Ultrasonic_init();
 
@@ -50,13 +52,13 @@ void App_Receive(uint8 recievedMSG)
 	switch (recievedMSG)
 	{
 	case 'F':
-		Forward();		/* Move forward */
+		Forward();			/* Move forward */
 		break;
 	case 'B':
-		Backward();		/* Move backward */
+		Backward();			/* Move backward */
 		break;
 	case 'S':
-		Stop();			/* Stop movement */
+		Stop();				/* Stop movement */
 		break;
 	case 'R':
 		Right_Forward();	/* Turn right and move forward */
@@ -91,64 +93,13 @@ void readDistance(void)
 
 	g_distanceRight = Ultrasonic_readDistance(U_right);
 
-	LCD_displayStringRowColumn(0, 0, "R:");
-	LCD_moveCursor(0, 2);
-	LCD_intgerToString(g_distanceRight);
-
-	if (g_distanceRight < 100)
-	{
-		LCD_displayStringRowColumn(0, 5, " ");
-	}
-	if (g_distanceRight >= 100)
-	{
-		LCD_displayStringRowColumn(0, 2, "99 ");
-	}
-	if (g_distanceRight < 10)
-	{
-		LCD_displayStringRowColumn(0, 3, " ");
-	}
-
 	_delay_ms(100);
 
 	g_distanceForward = Ultrasonic_readDistance(U_forward);
 
-	LCD_displayStringRowColumn(1, 0, "F:");
-	LCD_moveCursor(1, 2);
-	LCD_intgerToString(g_distanceForward);
-
-	if (g_distanceForward < 100)
-	{
-		LCD_displayStringRowColumn(1, 5, " ");
-	}
-	if (g_distanceForward >= 100)
-	{
-		LCD_displayStringRowColumn(1, 2, "99 ");
-	}
-	if (g_distanceForward < 10)
-	{
-		LCD_displayStringRowColumn(1, 3, " ");
-	}
-
 	_delay_ms(100);
 
 	g_distanceBackward = Ultrasonic_readDistance(U_backward);
-
-	LCD_displayStringRowColumn(1, 6, "B:");
-	LCD_moveCursor(1, 9);
-	LCD_intgerToString(g_distanceBackward);
-
-	if (g_distanceBackward < 100)
-	{
-		LCD_displayStringRowColumn(1, 12, " ");
-	}
-	if (g_distanceBackward >= 100)
-	{
-		LCD_displayStringRowColumn(1, 9, "99 ");
-	}
-	if (g_distanceBackward < 10)
-	{
-		LCD_displayStringRowColumn(1, 10, " ");
-	}
 
 	_delay_ms(100);
 
@@ -174,10 +125,12 @@ void readDistance(void)
 
 void collisionAvoidance(void)
 {
-	if(g_distanceForward <= 20 && (g_selection == 'F' || g_selection == 'R' || g_selection == 'L'))
+	if(g_distanceForward <= 40 && (g_selection == 'F' || g_selection == 'R' || g_selection == 'L'))
 	{
-		if(g_distanceForward <= 10)
+		if(g_distanceForward <= 30)
 		{
+			Backward();
+			_delay_ms(100);
 			Stop();
 			Buzzer_off();
 		}
@@ -186,12 +139,12 @@ void collisionAvoidance(void)
 			Buzzer_on();
 		}
 	}
-
-
-	if(g_distanceBackward <= 20 && (g_selection == 'B' || g_selection == 'A' || g_selection == 'H'))
+	else if(g_distanceBackward <= 40 && (g_selection == 'B' || g_selection == 'A' || g_selection == 'H'))
 	{
-		if(g_distanceBackward <= 10)
+		if(g_distanceBackward <= 30)
 		{
+			Forward();
+			_delay_ms(100);
 			Stop();
 			Buzzer_off();
 		}
@@ -199,6 +152,10 @@ void collisionAvoidance(void)
 		{
 			Buzzer_on();
 		}
+	}
+	else
+	{
+		Buzzer_off();
 	}
 }
 
@@ -219,7 +176,7 @@ void autoParking (void)
 		readDistance();
 		collisionAvoidance();
 
-		_delay_ms(100);
+//		_delay_ms(100);
 
 		l_counter++;
 		if (5 < l_counter)
@@ -229,29 +186,51 @@ void autoParking (void)
 			Stop();
 
 			_delay_ms(500);
+
+			Left_Forward_Parking(100);
 			_delay_ms(500);
-
-			Left_Forward_Parking();
-
+			Backward();
+			_delay_ms(100);
+			Left_Forward_Parking(100);
+			_delay_ms(500);
+			Backward();
+			_delay_ms(100);
+			Left_Forward_Parking(100);
 			_delay_ms(500);
 
 			Stop();
-
 			_delay_ms(500);
 
 			Backward();
-
-			_delay_ms(500);
-			_delay_ms(500);
+			_delay_ms(900);
 
 			Stop();
 
 			_delay_ms(500);
 
-			Left_Backward();
+			Right_Forward_Parking(100);
+			_delay_ms(700);
+			Backward();
+			_delay_ms(500);
+			Right_Forward_Parking(100);
+			_delay_ms(700);
+			Backward();
+			_delay_ms(500);
+			Right_Forward_Parking(100);
+			_delay_ms(700);
+			Backward();
+			Stop();
 
-			_delay_ms(700);
-			_delay_ms(700);
+//			_delay_ms(200);
+//			Right_Forward_Parking(100);
+//			_delay_ms(700);
+
+//			Backward();
+//			_delay_ms(200);
+//			Right_Forward_Parking(100);
+//			_delay_ms(200);
+//			_delay_ms(700);
+//			_delay_ms(700);
 
 			break;
 		}

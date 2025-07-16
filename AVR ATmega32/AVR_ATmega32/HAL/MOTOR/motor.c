@@ -161,6 +161,7 @@ void Backward(void)
     }
 }
 
+
 /*
  * Description :
  * Function to stop the car.
@@ -186,6 +187,15 @@ void Right_Forward(void)
         _delay_ms(DELAY_MOTOR);
     }
 }
+void Right_Forward_Parking(uint8 speed)
+{
+    for (int i = 0; i <= speed; i = i + 10)
+    {
+        DcMotor1_Rotate(CW, 50);
+        DcMotor2_Rotate(CCW, i);
+        _delay_ms(DELAY_MOTOR);
+    }
+}
 
 /*
  * Description :
@@ -207,12 +217,12 @@ void Left_Forward(void)
  * Function to turn the car left while moving forward (for parking).
  * This function stops motor 2 and gradually increases the speed of motor 1 to the maximum speed.
  */
-void Left_Forward_Parking(void)
+void Left_Forward_Parking(uint8 speed)
 {
-    for (int i = 0; i <= MOTOR_MAX_SPEED; i = i + 10)
+    for (int i = 0; i <= speed; i = i + 10)
     {
         DcMotor1_Rotate(CCW, i);
-        DcMotor2_Rotate(STOP, MOTOR_STOP);
+        DcMotor2_Rotate(CW, 50);
         _delay_ms(DELAY_MOTOR);
     }
 }
@@ -232,6 +242,7 @@ void Right_Backward(void)
     }
 }
 
+
 /*
  * Description :
  * Function to turn the car left while moving backward.
@@ -246,3 +257,4 @@ void Left_Backward(void)
         _delay_ms(DELAY_MOTOR);
     }
 }
+
